@@ -1,0 +1,7 @@
+{
+  "source": "original experiment saved split_indices.npz",
+  "seed": 20260928,
+  "fit": 55000,
+  "validation": 5000,
+  "sha256": "6c295fa5062bb96a0e0984a7dbaaaf90b93b3604c40afe979ec276eecf067399"
+}

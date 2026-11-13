@@ -1,0 +1,20 @@
+{
+  "provider": "Consumer Colab",
+  "gpu": "NVIDIA L4, 580.82.07, 23034 MiB",
+  "python": "3.13.16",
+  "versions": {
+    "jax": "0.4.38",
+    "jaxlib": "0.4.38",
+    "flax": "0.10.4",
+    "optax": "0.2.4",
+    "numpy": "1.26.4",
+    "scipy": "1.16.3",
+    "datasets": "4.8.5",
+    "transformers": "5.22.1",
+    "huggingface-hub": "1.33.0",
+    "safetensors": "0.8.0"
+  },
+  "utc": "2026-11-11T16:07:55.985710+00:00",
+  "notebook_kernel_python": "3.13.16",
+  "worker_executable": "/usr/bin/python3"
+}

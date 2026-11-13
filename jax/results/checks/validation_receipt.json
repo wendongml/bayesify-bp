@@ -1,0 +1,21 @@
+{
+  "tests_run": 55,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 440.86453552900093,
+  "jax": "0.4.38",
+  "versions": {
+    "jax": "0.4.38",
+    "flax": "0.10.4",
+    "optax": "0.2.4",
+    "numpy": "2.2.6",
+    "scipy": "1.18.1"
+  },
+  "python": "3.12.3",
+  "source_sha256": "ca6eff67998be7deeb59587624e218c70e6b0c920605d3e2c254b169ed724f4c",
+  "utc": "2026-11-12T20:13:40.236100+00:00",
+  "devices": [
+    "cuda:0"
+  ],
+  "status": "PASS"
+}

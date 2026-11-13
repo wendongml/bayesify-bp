@@ -1,0 +1,64 @@
+{
+  "method": "ep",
+  "checkpoint_sha256": "c63ea46ddbe18390dded9c9662f44ede41bc9d2baf7568122a39ac8125a365b9",
+  "networks": 524288,
+  "independent_batches": 8192,
+  "MC_seconds": 194.7760758510001,
+  "test_index": 0,
+  "hardware": "NVIDIA L4",
+  "arithmetic_dtype": "torch.float32",
+  "reference": "complete shared-weight networks; antithetic pairs; Price readout adjoints",
+  "MC_relative_standard_error": {
+    "output_mean": 0.0001108029440948713,
+    "output_variance": 0.002566224964757973,
+    "mean_signal": 0.023054706649148146,
+    "centered_signal": 0.013935233058503234
+  },
+  "rows": [
+    {
+      "approximation": "diagonal",
+      "rank": 0,
+      "forward_backward_seconds": 0.23462958699997216,
+      "mean_relative_error": 0.036842866645040384,
+      "covariance_relative_error": 0.9801806788029875,
+      "mean_signal_relative_error": 0.9322479581233021,
+      "centered_signal_relative_error": 0.922644422033298
+    },
+    {
+      "approximation": "rank1",
+      "rank": 1,
+      "forward_backward_seconds": 0.21929439599989564,
+      "mean_relative_error": 0.03215657886779921,
+      "covariance_relative_error": 1.3121001855441665,
+      "mean_signal_relative_error": 0.8660208963842726,
+      "centered_signal_relative_error": 0.8546677842335126
+    },
+    {
+      "approximation": "rank4",
+      "rank": 4,
+      "forward_backward_seconds": 0.22137048600006892,
+      "mean_relative_error": 0.02322164448640955,
+      "covariance_relative_error": 0.8491177978470267,
+      "mean_signal_relative_error": 0.4239719833594659,
+      "centered_signal_relative_error": 1.3210898982941766
+    },
+    {
+      "approximation": "rank16",
+      "rank": 16,
+      "forward_backward_seconds": 0.2232680629999777,
+      "mean_relative_error": 0.014146962873065381,
+      "covariance_relative_error": 0.6302505269340395,
+      "mean_signal_relative_error": 0.4576046068988406,
+      "centered_signal_relative_error": 4.5786925117951105
+    },
+    {
+      "approximation": "rank64",
+      "rank": 64,
+      "forward_backward_seconds": 0.21741614000006848,
+      "mean_relative_error": 0.012448504615216925,
+      "covariance_relative_error": 0.28204569041367217,
+      "mean_signal_relative_error": 0.44413740809444463,
+      "centered_signal_relative_error": 0.41886431193503476
+    }
+  ]
+}

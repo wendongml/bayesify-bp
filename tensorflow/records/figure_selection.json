@@ -1,0 +1,25 @@
+{
+  "selected_figures": [
+    "tutorial_gaussian_mlp_exact_message_equivalence",
+    "tutorial_shared_ep_message_equivalence",
+    "tutorial_shared_mfvi_message_equivalence",
+    "tutorial_forward_accuracy_cost",
+    "tutorial_forward_mc_agreement",
+    "tutorial_backward_accuracy_cost",
+    "tutorial_backward_mc_agreement",
+    "mnist_architectures",
+    "mnist_mlp_clean_uncertainty",
+    "mnist_lenet_clean_uncertainty",
+    "mnist_mlp_clean_learning",
+    "mnist_lenet_clean_learning",
+    "mnist_lenet_dirty_uncertainty",
+    "mnist_dirty_ambiguity",
+    "tutorial_resnet20_cifar10_calibration_and_selection",
+    "tutorial_densenet40_cifar10_calibration_and_selection",
+    "tutorial_sst2_calibration_and_selection",
+    "tutorial_clinc_calibration_and_selection",
+    "resnet20_cifar10_new_R_training_seed41_learning"
+  ],
+  "notebook_figures": 19,
+  "policy": "All 19 selected figures and 9 displayed tables are preserved inline. Compact numerical summaries and plotting counts accompany them; no model checkpoints or bulk prediction arrays."
+}

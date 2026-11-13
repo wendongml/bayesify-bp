@@ -1,0 +1,221 @@
+--- bayesian_backprop_advanced_tutorial/analysis/blob_replication_20261102/replicate.py
++++ python/blob_mirror/replicate.py
+@@ -16,12 +16,10 @@
+ from transformers import RobertaConfig, RobertaForSequenceClassification
+ from peft import LoraConfig, get_peft_model
+ 
+-ROOT = Path('/content/blob_replication')
++ROOT = Path(__file__).resolve().parent
+ sys.path.insert(0, str(ROOT/'official'))
+ from modelwrappers.blob import BLoB, get_parser as blob_parser
+ from modelwrappers.mle import MLE, get_parser as map_parser
+-from models.seqcls import SeqCls
+-from dataset.S2ClassDataset import S2ClassDataset
+ 
+ class Local:
+     """The small Accelerator interface used by the original constructors/tests."""
+@@ -58,204 +56,3 @@
+     return self.base_model(**batch).logits.unsqueeze(1)
+ MLE.forward_logits = map_forward
+ 
+-
+-def update(model, batches, scheduler_ticks=4):
+-    """Average four rank gradients; preserve the upstream two-optimizer ordering.
+-
+-    AdamW is created BEFORE rho, so only A/B receive its likelihood step.
+-    rho's likelihood gradient remains for the following SGD(KL) step, exactly
+-    as in upstream BLoB.fit. SGD sees KL gradients at the updated A mean.
+-    """
+-    loss_total=0.; correct=0; count=0
+-    for batch in batches:
+-        logits=model.forward_logits(batch, n_samples=1).mean(1)
+-        loss=F.cross_entropy(logits,batch['labels'])
+-        (loss/len(batches)).backward()
+-        loss_total+=float(loss.detach())/len(batches)
+-        correct+=int((logits.argmax(-1)==batch['labels']).sum());count+=len(logits)
+-    model.opt.step();model.opt.zero_grad()
+-    for _ in range(scheduler_ticks):model.scheduler.step()
+-    kl_value=0.; pi=0.
+-    if isinstance(model,BLoB):
+-        kl=model.div_posterior_prior(model.base_model)
+-        cycle = model.M if model.i % model.M == 0 else model.i % model.M
+-        pi=2**cycle/(2**(model.M+1)-1) if model.klreweighting else 1/model.M
+-        model.i+=1
+-        (kl*pi).backward()
+-        model.opt2.step();model.opt2.zero_grad()
+-        for _ in range(scheduler_ticks):model.scheduler2.step()
+-        kl_value=float(kl.detach())
+-    return {'train_nll':loss_total,'train_accuracy':correct/count,'kl':kl_value,'kl_weight':pi}
+-
+-
+-def make_tiny(method):
+-    args=arguments(method,1);args.num_samples=128;args.outdim=2;args.n_epochs=1
+-    cfg=RobertaConfig(vocab_size=40,hidden_size=16,num_hidden_layers=1,
+-        num_attention_heads=2,intermediate_size=24,max_position_embeddings=32,
+-        num_labels=2,hidden_dropout_prob=0.,attention_probs_dropout_prob=0.)
+-    base=RobertaForSequenceClassification(cfg).double().cuda()
+-    pc=LoraConfig(r=2,lora_alpha=2,lora_dropout=0.,target_modules=['query','value','classifier.dense','classifier.out_proj'])
+-    base=get_peft_model(base,pc)
+-    model=(BLoB if method=='blob' else MLE)(base,pc,args,Local()).double().cuda()
+-    with torch.no_grad():
+-        for n,p in model.named_parameters():
+-            if "lora_B" in n:p.normal_(0.,0.1)  # Nonzero readout makes rho likelihood gradients nontrivial.
+-    model.wandb_logger=None;model.M=19;model.train()
+-    return model
+-
+-
+-def check_update():
+-    """Compare our extracted update against the unmodified official fit method."""
+-    rows=[]
+-    for method in ['map','blob']:
+-        set_seed(123); ref=make_tiny(method)
+-        set_seed(123); candidate=make_tiny(method)
+-        batch={'input_ids':torch.tensor([[0,4,6,2],[0,5,8,2]],device='cuda'),
+-               'attention_mask':torch.ones(2,4,dtype=torch.long,device='cuda'),
+-               'labels':torch.tensor([0,1],device='cuda')}
+-        state=torch.cuda.get_rng_state();cpu=torch.get_rng_state()
+-        ref.fit([batch],[])
+-        torch.cuda.set_rng_state(state);torch.set_rng_state(cpu)
+-        update(candidate,[batch],scheduler_ticks=1)
+-        errors=[float((p-q).abs().max()) for p,q in zip(ref.parameters(),candidate.parameters())]
+-        worst=max(errors);assert worst<1e-9,(method,worst)
+-        rho=[p for n,p in candidate.named_parameters() if 'lora_A_rho' in n]
+-        adamids={id(p) for g in candidate.opt.param_groups for p in g['params']}
+-        assert all(id(p) not in adamids for p in rho)
+-        rows.append({'method':method,'official_fit_update_max_abs':worst,'rho_not_in_adamw':True})
+-    # Four-rank gradient averaging: deterministic toy MAP, microbatch vs full batch.
+-    set_seed(22);a=make_tiny('map');set_seed(22);b=make_tiny('map')
+-    batch={'input_ids':torch.tensor([[0,4+i,6,2] for i in range(8)],device='cuda'),
+-           'attention_mask':torch.ones(8,4,dtype=torch.long,device='cuda'),
+-           'labels':torch.arange(8,device='cuda')%2}
+-    update(a,[{k:v[i:i+2] for k,v in batch.items()} for i in range(0,8,2)])
+-    update(b,[batch])
+-    worst=max(float((p-q).abs().max()) for p,q in zip(a.parameters(),b.parameters()))
+-    assert worst<1e-9,worst
+-    rows.append({'method':'four_rank_average','max_abs':worst})
+-    (ROOT/'update_parity.json').write_text(json.dumps(rows,indent=2));print(json.dumps(rows),flush=True)
+-
+-
+-class FixedBatches:
+-    batch_size=32
+-    drop_last=False
+-    def __init__(self,batches):self.batches=batches
+-    def __iter__(self):return iter(self.batches)
+-    def __len__(self):return len(self.batches)
+-
+-
+-def state_for_save(model, epoch, step, training_seconds, order=None, cursor=0):
+-    # Include frozen randomly initialized classification head, not just LoRA.
+-    names={n for n,p in model.named_parameters() if p.requires_grad or 'classifier' in n}
+-    state={'weights':{n:p.detach().cpu() for n,p in model.named_parameters() if n in names},
+-        'opt':model.opt.state_dict(),'scheduler':model.scheduler.state_dict(),
+-        'epoch':epoch,'step':step,'training_seconds':training_seconds,
+-        'python_rng':random.getstate(),'numpy_rng':np.random.get_state(),
+-        'torch_rng':torch.get_rng_state(),'cuda_rng':torch.cuda.get_rng_state_all(),
+-        'order':order,'cursor':cursor,'args':vars(model.args)}
+-    if isinstance(model,BLoB):state.update(opt2=model.opt2.state_dict(),scheduler2=model.scheduler2.state_dict(),i=model.i,M=model.M)
+-    return state
+-
+-
+-def save(model,path,epoch,step,secs,order=None,cursor=0):
+-    tmp=path.with_suffix('.tmp');torch.save(state_for_save(model,epoch,step,secs,order,cursor),tmp);tmp.replace(path)
+-
+-
+-@torch.inference_mode()
+-def evaluate(model,loader,draws,out):
+-    model.eval();pred=[];gold=[];legacy=[];torch.cuda.synchronize();start=time.perf_counter()
+-    for batch in loader:
+-        batch={k:v.cuda() for k,v in batch.items()}
+-        probs=model.forward_logits(batch,n_samples=draws).softmax(-1).mean(1)
+-        pred.append(probs.cpu());gold.append(batch['labels'].cpu())
+-        legacy.append(float(F.nll_loss(probs.log(),batch['labels'])))
+-    torch.cuda.synchronize();seconds=time.perf_counter()-start
+-    p=torch.cat(pred);y=torch.cat(gold);conf,cls=p.max(-1);ok=cls.eq(y)
+-    ece=0.
+-    for lo in torch.linspace(0,1,16)[:-1]:
+-        mask=(conf>lo)&(conf<=lo+1/15)
+-        if mask.any():ece+=float(mask.float().mean()*(ok[mask].float().mean()-conf[mask].mean()).abs())
+-    nll=float(F.nll_loss(p.log(),y));accuracy=float(ok.float().mean())
+-    metrics={'accuracy':accuracy,'nll':nll,'legacy_batchmean_nll':sum(legacy)/len(legacy),
+-             'ece15':ece,'brier':float(((p-F.one_hot(y,2))**2).sum(-1).mean()),
+-             'seconds':seconds,'draws':draws,'n':len(y)}
+-    np.savez_compressed(out.with_suffix('.npz'),probabilities=p.numpy(),labels=y.numpy())
+-    out.with_suffix('.json').write_text(json.dumps(metrics,indent=2))
+-    model.train();return metrics
+-
+-
+-def run(method,seed,limit_steps=0):
+-    set_seed(seed);torch.set_num_threads(4)
+-    torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
+-    args=arguments(method,seed);ds=S2ClassDataset(Local(),args);ds.get_loaders()
+-    args.outdim=ds.num_labels;args.num_samples=ds.num_samples
+-    original_batches=len(ds.train_dataloader);epochs=math.ceil(5000/original_batches)
+-    args.n_epochs=epochs
+-    architecture=SeqCls(args,Local());pc=architecture.peft_config
+-    model=(BLoB if method=='blob' else MLE)(architecture.model,pc,args,Local()).cuda()
+-    model.wandb_logger=None
+-    sharded_length=math.ceil(original_batches/4)
+-    if method=='blob':model.M=int(100*ds.num_samples**(math.pi/8)/(original_batches/sharded_length)/32)
+-    folder=ROOT/'results'/f'{method}_seed{seed}';folder.mkdir(parents=True,exist_ok=True)
+-    protocol={'method':method,'seed':seed,'args':vars(args),'epochs':epochs,
+-       'microbatch':32,'virtual_ranks':4,'global_batch':128,'updates':epochs*sharded_length,
+-       'kl_cycle':getattr(model,'M',None),'source_commit':'7d960082efa3a680b76aac79d2a4f13d7f0f651a',
+-       'precision':'float32, TF32 off','module_training_flags':{n:m.training for n,m in model.named_modules() if isinstance(m,torch.nn.Dropout)},'checkpoint_selection':'final scheduled state; no validation selection',
+-       'train_ids':ds.raw_dataset['train']['idx'],'eval_ids':ds.raw_dataset['validation']['idx'],
+-       'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad)}
+-    lengths=[len(ds.tokenizer(x['sentence1'],x['sentence2'])['input_ids']) for x in ds.raw_dataset['train']]
+-    protocol.update(max_untruncated_train_length=max(lengths),train_rows_truncated_at256=sum(x>256 for x in lengths))
+-    (folder/'protocol.json').write_text(json.dumps(protocol,indent=2))
+-    checkpoint=folder/'recovery.pt';start_epoch=0;steps=0;training_seconds=0.;resume_order=None;resume_cursor=0
+-    if checkpoint.exists():
+-        st=torch.load(checkpoint,map_location='cuda',weights_only=False)
+-        named=dict(model.named_parameters())
+-        with torch.no_grad():
+-            for n,w in st['weights'].items():named[n].copy_(w)
+-        model.opt.load_state_dict(st['opt']);model.scheduler.load_state_dict(st['scheduler'])
+-        if method=='blob':
+-            model.opt2.load_state_dict(st['opt2']);model.scheduler2.load_state_dict(st['scheduler2']);model.i=st['i'];model.M=st['M']
+-        start_epoch=st['epoch'];steps=st['step'];training_seconds=st['training_seconds']
+-        resume_order=st['order'];resume_cursor=st['cursor']
+-        random.setstate(st['python_rng']);np.random.set_state(st['numpy_rng']);torch.set_rng_state(st['torch_rng'].cpu());torch.cuda.set_rng_state_all([x.cpu() for x in st['cuda_rng']])
+-        print('RESUMED',method,seed,steps,flush=True)
+-    else:save(model,folder/'initial.pt',0,0,0.)
+-    # Upstream fit_evaluate never calls train(): preserve constructor module flags.
+-    # Pretrained backbone dropout consequently stays in eval mode.
+-    startwall=time.time()
+-    fields=['epoch','update','training_seconds','train_nll','train_accuracy','kl','kl_weight','lr','rho_mean','rho_std']
+-    log=folder/'learning.csv';isnew=not log.exists()
+-    with log.open('a',buffering=1) as f:
+-        writer=csv.DictWriter(f,fieldnames=fields)
+-        if isnew:writer.writeheader()
+-        for epoch in range(start_epoch,epochs):
+-            order=resume_order if resume_order is not None else list(ds.train_dataloader.batch_sampler)
+-            fixed=FixedBatches(order)
+-            shards=[list(BatchSamplerShard(fixed,4,r,split_batches=False,even_batches=True)) for r in range(4)]
+-            for cursor in range(resume_cursor,len(shards[0])):
+-                torch.cuda.synchronize();t=time.perf_counter()
+-                micro=[{k:v.cuda() for k,v in ds.train_dataloader.collate_fn([ds.train_dataloader.dataset[j] for j in shards[r][cursor]]).items()} for r in range(4)]
+-                values=update(model,micro);torch.cuda.synchronize();training_seconds+=time.perf_counter()-t;steps+=1
+-                rho=torch.cat([p.detach().flatten() for n,p in model.named_parameters() if 'lora_A_rho' in n]) if method=='blob' else torch.zeros(1,device='cuda')
+-                row={'epoch':epoch+1,'update':steps,'training_seconds':training_seconds,**values,
+-                     'lr':model.opt.param_groups[0]['lr'],'rho_mean':float(rho.mean()),'rho_std':float(rho.std()) if len(rho)>1 else 0.}
+-                writer.writerow(row)
+-                if steps%10==0:
+-                    (folder/'progress.json').write_text(json.dumps(row));print(json.dumps({'method':method,'seed':seed,**row}),flush=True)
+-                if steps%100==0:save(model,checkpoint,epoch,steps,training_seconds,order,cursor+1)
+-                if limit_steps and steps>=limit_steps:
+-                    save(model,checkpoint,epoch,steps,training_seconds,order,cursor+1)
+-                    print('SMOKE COMPLETE',method,steps,training_seconds,flush=True);return
+-            save(model,checkpoint,epoch+1,steps,training_seconds)
+-            resume_order=None;resume_cursor=0
+-    save(model,folder/'final.pt',epochs,steps,training_seconds)
+-    metrics=evaluate(model,ds.test_dataloader,10 if method=='blob' else 1,folder/'final_predictions')
+-    metrics.update(training_seconds=training_seconds,optimizer_updates=steps,epochs=epochs,method=method,seed=seed,elapsed_since_resume=time.time()-startwall)
+-    (folder/'complete.json').write_text(json.dumps(metrics,indent=2));print('COMPLETE',json.dumps(metrics),flush=True)
+-
+-
+-if __name__=='__main__':
+-    p=argparse.ArgumentParser();p.add_argument('--method',choices=['map','blob']);p.add_argument('--seed',type=int,default=1);p.add_argument('--check',action='store_true');p.add_argument('--limit-steps',type=int,default=0)
+-    a=p.parse_args()
+-    if a.check:check_update()
+-    else:run(a.method,a.seed,a.limit_steps)

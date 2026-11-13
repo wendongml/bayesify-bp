@@ -1,0 +1,30 @@
+[
+  {
+    "architecture": "mlp",
+    "maximum_absolute_error": 1.0826624929904938e-08,
+    "relative_norm_error": 8.916763931665628e-07,
+    "bytes": 3765,
+    "weights": "explicit graph inputs; not bundled"
+  },
+  {
+    "architecture": "lenet",
+    "maximum_absolute_error": 5.960464477539063e-08,
+    "relative_norm_error": 2.2616718808876612e-07,
+    "bytes": 7935,
+    "weights": "explicit graph inputs; not bundled"
+  },
+  {
+    "architecture": "resnet20",
+    "maximum_absolute_error": 5.960464477539062e-07,
+    "relative_norm_error": 2.8646144301092136e-07,
+    "bytes": 110728,
+    "weights": "explicit graph inputs; not bundled"
+  },
+  {
+    "architecture": "densenet40",
+    "maximum_absolute_error": 0.0008544921875,
+    "relative_norm_error": 1.0425104619571357e-06,
+    "bytes": 291925,
+    "weights": "explicit graph inputs; not bundled"
+  }
+]

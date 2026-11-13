@@ -1,0 +1,129 @@
+{
+  "scope": "Saved-draw approximation accuracy versus numerical work; no new training or network evaluation",
+  "source_archive_sha256": "89bd83a0c8d0696977e56edb03ff1dcd6bf12c2e9defb3cc8afbd340e9112160",
+  "records": [
+    {
+      "method": "mfvi",
+      "input": 0,
+      "archive_member": "results/mfvi_shifted_i0_s1700001.npz",
+      "sha256": "34599a9c469c6e64d2eb1470ea020f4df7a61a412634d2234ddffe1b041aa840",
+      "groups": 512,
+      "nodes_per_group": 4
+    },
+    {
+      "method": "mfvi",
+      "input": 1,
+      "archive_member": "results/mfvi_shifted_i1_s1700001.npz",
+      "sha256": "9a87f80ea681df65227e54a90879f3a692f570df257bc819421c34761a69fdb2",
+      "groups": 512,
+      "nodes_per_group": 4
+    },
+    {
+      "method": "mfvi",
+      "input": 2,
+      "archive_member": "results/mfvi_shifted_i2_s1700001.npz",
+      "sha256": "bf65c2d402459b9605f5643b834ffd14c741b2c605165a041c6b9ad43083ab8d",
+      "groups": 512,
+      "nodes_per_group": 4
+    },
+    {
+      "method": "mfvi",
+      "input": 3,
+      "archive_member": "results/mfvi_shifted_i3_s1700001.npz",
+      "sha256": "82815aaa8399dd36917dcd150acaf59de66486da4e8d2e8a99c03fe3f14e7df0",
+      "groups": 512,
+      "nodes_per_group": 4
+    },
+    {
+      "method": "ep",
+      "input": 0,
+      "archive_member": "results/ep_shifted_i0_s1700001.npz",
+      "sha256": "56e8e32765abdbc069b27e46303186adf3de78b18ab5048c31b3c87b2d531292",
+      "groups": 512,
+      "nodes_per_group": 4
+    },
+    {
+      "method": "ep",
+      "input": 1,
+      "archive_member": "results/ep_shifted_i1_s1700001.npz",
+      "sha256": "3a87418bdf9747235bf8b7a5ec0b290cd5f6c079250f67fda0f99988653c39e3",
+      "groups": 512,
+      "nodes_per_group": 4
+    },
+    {
+      "method": "ep",
+      "input": 2,
+      "archive_member": "results/ep_shifted_i2_s1700001.npz",
+      "sha256": "9c90eca31f912cfd1f45b44e8f94ea18f9e02d29509e4f680b6f0fcb97094fec",
+      "groups": 512,
+      "nodes_per_group": 4
+    },
+    {
+      "method": "ep",
+      "input": 3,
+      "archive_member": "results/ep_shifted_i3_s1700001.npz",
+      "sha256": "d364c3eb7f3a2b7b3bdce5a11522402235d5912e1eef7b3b4aa14161e12c7238",
+      "groups": 512,
+      "nodes_per_group": 4
+    }
+  ],
+  "validation": [
+    {
+      "method": "mfvi",
+      "input": 0,
+      "relative_replay_error": 4.807735699538006e-16
+    },
+    {
+      "method": "mfvi",
+      "input": 1,
+      "relative_replay_error": 6.316971342684479e-16
+    },
+    {
+      "method": "mfvi",
+      "input": 2,
+      "relative_replay_error": 6.849930821674845e-16
+    },
+    {
+      "method": "mfvi",
+      "input": 3,
+      "relative_replay_error": 6.501286711982643e-16
+    },
+    {
+      "method": "ep",
+      "input": 0,
+      "relative_replay_error": 6.4615917489618855e-16
+    },
+    {
+      "method": "ep",
+      "input": 1,
+      "relative_replay_error": 4.790411819214963e-16
+    },
+    {
+      "method": "ep",
+      "input": 2,
+      "relative_replay_error": 6.544054842809353e-16
+    },
+    {
+      "method": "ep",
+      "input": 3,
+      "relative_replay_error": 9.279798993787158e-16
+    }
+  ],
+  "budgets": [
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "aggregation": "RMS relative error across all disjoint batches at each budget and all four fixed inputs; equal input weight",
+  "integration": "Both estimators use identical importance-weighted, antithetic Gaussian groups; moment correction adds the Gaussian integral and subtracts its paired sample estimate",
+  "reference_seed": 900001,
+  "evaluation_seed": 1700001,
+  "cost_scope": "Backward x-axis counts nonlinear network evaluations; Gaussian-head and paired-linear-surrogate overhead is additional. Forward x-axis is the existing instrumented diagnostic timer, not production latency.",
+  "backward_quantity": "Likelihood contribution to weight-mean message; no optimizer or prior update",
+  "weight_belief": "Fixed diagonal Gaussian, unchanged",
+  "omitted_gallery": "All prior coordinate scatters and variance-signal diagnostics remain in companion results"
+}

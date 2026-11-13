@@ -1,0 +1,53 @@
+key,file,start,end,visible,title
+runtime,setup.R,2,32,False,TensorFlow values used by the equations
+geometry,gaussian.R,2,40,True,Gaussian Fisher coordinates and finite updates
+layers,layers.R,2,86,True,"Affine, convolution, activation and merge moments"
+reverse,layers.R,89,183,True,Cached forward maps and explicit reverse traversal
+gaussian_mlp,gaussian.R,43,106,True,Gaussian MLP: forward and backward messages
+gaussian_reference,gaussian.R,109,155,True,Independent Gaussian conditioning and smoothing
+mfvi_math,messages.R,2,95,True,Diagonal Gaussian messages and MFVI canonical update
+literal,messages.R,98,260,True,Handwritten local message equations
+projected,messages.R,263,418,True,The same maps through local autodiff
+teaching_mlp,messages.R,421,468,True,The nonlinear MLP used for the equality check
+ep_mfvi,messages.R,471,503,True,EP and MFVI select different objectives and finite updates
+graph,covariance.R,2,102,True,Shared covariance directions on the common graph
+image_diagonal,covariance.R,105,156,True,Diagonal image-layer covariance approximation
+image_efficient,covariance.R,159,216,True,Image-gradient covariance calculation
+scalar,covariance.R,219,372,True,Scalar readout moment and sensitivity approximation
+frozen,covariance.R,375,420,True,Frozen sensitivity second moments
+residual,covariance.R,423,478,True,Gaussian integral plus a paired nonlinear residual
+residual_network,covariance.R,481,581,True,Apply the residual identity to one network
+mnist_layers,models.R,2,146,True,Complete MLP and LeNet construction and local moments
+cifar_models,models.R,149,266,True,Complete ResNet-20 and DenseNet-40 construction
+attention,models.R,269,303,True,"Attention, normalization and GELU"
+public_weights,models.R,306,320,False,Load the public pretrained transformer weights
+gpt2_model,models.R,323,385,True,Complete GPT-2 rank-4 LoRA construction
+roberta_model,models.R,388,517,True,RoBERTa backbone and rank-8 LoRA construction
+heads,inference.R,2,71,True,"Probability integration, objective, cavity and KL"
+optimizers,inference.R,74,128,True,The optimizer recurrences used in the experiments
+updates,inference.R,131,271,True,One complete sampled or moment minibatch update
+prediction,inference.R,274,294,True,Predictive probability averaging
+mnist_updates,inference.R,297,400,True,MNIST updates and predictive averaging
+metrics,uncertainty.R,2,49,True,Uncertainty metrics and their exact helpers
+display,plots.R,2,15,False,Table display
+plot_base,plots.R,18,176,False,"Shared calibration, selection and ROC plotting"
+learning_plots,plots.R,179,205,False,Learning curves from recorded epochs
+message_plots,plots.R,208,277,False,Equal-axis message plots
+mnist_plots,plots.R,280,461,False,MNIST tables and uncertainty figures
+approx_plots,plots.R,464,584,False,Approximation-versus-cost and MC agreement figures
+mnist_training,experiments.R,2,206,False,"Public MNIST data, complete training and evaluation"
+benchmark_controls,experiments.R,209,288,False,Fixed benchmark settings
+benchmark_training,experiments.R,291,916,False,Public data and complete benchmark training
+official_clinc,experiments.R,919,988,False,Official CLINC evaluation
+diagnostics,experiments.R,991,1154,False,Same-belief Monte Carlo checks
+forward_cost,results.R,2,41,False,Compute forward approximation errors
+backward_cost,results.R,44,78,False,Compute backward approximation errors
+benchmark_reader,results.R,81,120,False,Read per-example benchmark predictions
+selected_gpt2,results.R,123,157,False,Read selected GPT-2 predictions and settings
+compact_transformers,results.R,160,197,False,Read the original transformer prediction records
+transformer_table,results.R,200,247,False,Common transformer tables and metrics
+architecture_views,results.R,250,271,False,Native Keras summaries and expanded diagrams
+keras_inspection,results.R,274,336,False,Build the native Keras inspection view
+check_gaussian,checks.R,2,120,False,Independent numerical check: message_equivalence
+check_messages,checks.R,123,186,False,Independent numerical check: shared_layers
+fresh_transformers,results.R,339,363,False,Read new original-PyTorch training outputs

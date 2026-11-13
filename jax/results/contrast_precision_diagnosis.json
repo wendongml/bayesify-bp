@@ -1,0 +1,14 @@
+[
+  {
+    "precision": "None",
+    "minimum_eigenvalue": -0.0008680046885274351,
+    "finite_cholesky": false,
+    "covariance_error": 0.005721092224121094
+  },
+  {
+    "precision": "HIGHEST",
+    "minimum_eigenvalue": 0.0014549336628988385,
+    "finite_cholesky": true,
+    "covariance_error": 8.344650268554688e-07
+  }
+]

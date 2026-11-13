@@ -1,0 +1,21 @@
+{
+  "tests_run": 54,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 334.04376644000877,
+  "jax": "0.4.38",
+  "versions": {
+    "jax": "0.4.38",
+    "flax": "0.10.4",
+    "optax": "0.2.4",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1"
+  },
+  "python": "3.11.4",
+  "source_sha256": "85001cd9621bb036f2741f7374bb5c65ddcffb7dfd6f73b8da440ae5df36ec60",
+  "utc": "2026-11-12T01:58:20.532559+00:00",
+  "devices": [
+    "TFRT_CPU_0"
+  ],
+  "status": "PASS"
+}

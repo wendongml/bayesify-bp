@@ -1,0 +1,62 @@
+[
+  {
+    "architecture": "resnet20",
+    "method": "ordinary",
+    "loss": 6.040449142456055,
+    "elapsed": 9.477483368999856
+  },
+  {
+    "architecture": "resnet20",
+    "method": "sampled_mfvi",
+    "loss": 6.004343032836914,
+    "elapsed": 45.23193912200031
+  },
+  {
+    "architecture": "resnet20",
+    "method": "moment_mfvi",
+    "loss": 6.119132995605469,
+    "elapsed": 78.47468037700037
+  },
+  {
+    "architecture": "resnet20",
+    "method": "sampled_ep",
+    "loss": 6.0593132972717285,
+    "elapsed": 61.67685184799984
+  },
+  {
+    "architecture": "resnet20",
+    "method": "moment_ep",
+    "loss": 6.444050312042236,
+    "elapsed": 76.08663736499966
+  },
+  {
+    "architecture": "densenet40",
+    "method": "ordinary",
+    "loss": 2.318665027618408,
+    "elapsed": 92.08850220299973
+  },
+  {
+    "architecture": "densenet40",
+    "method": "sampled_mfvi",
+    "loss": 2.308074951171875,
+    "elapsed": 202.70293777400002
+  },
+  {
+    "architecture": "densenet40",
+    "method": "moment_mfvi",
+    "loss": 2.3173091411590576,
+    "elapsed": 501.037002734
+  },
+  {
+    "architecture": "densenet40",
+    "method": "sampled_ep",
+    "loss": 2.650637149810791,
+    "elapsed": 272.6715056799999
+  },
+  {
+    "architecture": "densenet40",
+    "method": "moment_ep",
+    "loss": 5.645226001739502,
+    "elapsed": 364.043706124
+  }
+]

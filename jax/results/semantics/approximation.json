@@ -1,0 +1,68 @@
+{
+  "samples": 16384,
+  "mc_forward_seconds": 0.0008636510028736666,
+  "mc_compile_seconds": 0.798275173001457,
+  "rows": [
+    {
+      "scheme": "diagonal",
+      "forward_seconds": 0.00025958499463740736,
+      "compile_seconds": 0.4986268650027341,
+      "mean_relative_error": 0.007986572904395911,
+      "covariance_relative_error": 0.03613221231466184,
+      "mfvi_mean_relative_error": 0.011706045996285412,
+      "mfvi_second_relative_error": 0.014884431119890794,
+      "mfvi_centered_relative_error": 0.10662837892524829,
+      "mfvi_forward_backward_seconds": 0.0010251459971186705,
+      "ep_mean_relative_error": 0.00903261037672634,
+      "ep_second_relative_error": 0.012873986139771981,
+      "ep_centered_relative_error": 0.12957582951535004,
+      "ep_forward_backward_seconds": 0.0010713439987739548
+    },
+    {
+      "scheme": "shared rank 4",
+      "forward_seconds": 0.0002796769986161962,
+      "compile_seconds": 1.5049514300044393,
+      "mean_relative_error": 0.05945505135075794,
+      "covariance_relative_error": 0.1639885888742401,
+      "mfvi_mean_relative_error": 0.10841852299989006,
+      "mfvi_second_relative_error": 0.10226794211606599,
+      "mfvi_centered_relative_error": 0.7450476583016786,
+      "mfvi_forward_backward_seconds": 0.0008837730056256987,
+      "ep_mean_relative_error": 0.10413450027397769,
+      "ep_second_relative_error": 0.10043152704642526,
+      "ep_centered_relative_error": 0.9651193310270509,
+      "ep_forward_backward_seconds": 0.0008834100008243695
+    },
+    {
+      "scheme": "shared rank 16",
+      "forward_seconds": 0.00029607699980260804,
+      "compile_seconds": 1.6370152640010929,
+      "mean_relative_error": 0.080509081774827,
+      "covariance_relative_error": 0.08327808187630475,
+      "mfvi_mean_relative_error": 0.06706724254550304,
+      "mfvi_second_relative_error": 0.06312908591926854,
+      "mfvi_centered_relative_error": 0.40833718773734246,
+      "mfvi_forward_backward_seconds": 0.0010625310023897327,
+      "ep_mean_relative_error": 0.06632403029518477,
+      "ep_second_relative_error": 0.061884825976344975,
+      "ep_centered_relative_error": 0.49860273454300413,
+      "ep_forward_backward_seconds": 0.0007701490030740388
+    },
+    {
+      "scheme": "shared rank 64",
+      "forward_seconds": 0.00030778600194025785,
+      "compile_seconds": 2.0346969040037948,
+      "mean_relative_error": 0.026047080473435503,
+      "covariance_relative_error": 0.08427928701927707,
+      "mfvi_mean_relative_error": 0.0313151283669154,
+      "mfvi_second_relative_error": 0.03380710725860832,
+      "mfvi_centered_relative_error": 0.2595172588421279,
+      "mfvi_forward_backward_seconds": 0.0012100859967176802,
+      "ep_mean_relative_error": 0.03093931715619716,
+      "ep_second_relative_error": 0.03292737828170628,
+      "ep_centered_relative_error": 0.31624185860670484,
+      "ep_forward_backward_seconds": 0.0010928030023933388
+    }
+  ],
+  "note": "Untrained nonlinear fixture; no classification-performance claim. Centered variance sensitivity is 2 v^2 dPhi/dv, not a finite posterior variance change."
+}

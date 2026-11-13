@@ -1,0 +1,188 @@
+[
+  {
+    "source_id": "local-gaussian-factor",
+    "pytorch_id": "local-gaussian-factor",
+    "jax_heading": "## Local Gaussian factor",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "a5d0deb0",
+    "pytorch_id": "gaussian-derivation",
+    "jax_heading": "### Why a gradient becomes a moment message",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "layer-equations-and-code",
+    "pytorch_id": "layer-equations-and-code",
+    "jax_heading": "## Layer equations and their literal reverse messages",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "322a2f4e",
+    "pytorch_id": "literal-dense-derivation",
+    "jax_heading": "### The handwritten dense-layer reverse calculation",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "a7fc438b",
+    "pytorch_id": "explicit-graph",
+    "jax_heading": "**Implementation: `messages.py`**",
+    "scope": "implementation"
+  },
+  {
+    "source_id": "message-carriers",
+    "pytorch_id": "message-carriers",
+    "jax_heading": "## Literal messages, projected messages, and custom-gradient carriers",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "c53cb9b9",
+    "pytorch_id": "gaussian-smoothing-proof",
+    "jax_heading": "### Why smoothing and backward moment updates coincide",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "f180df85",
+    "pytorch_id": "ep-mfvi-derivation",
+    "jax_heading": "### EP: a finite tilted-moment identity",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "ep-sites-and-mfvi-schedule",
+    "pytorch_id": "ep-sites-and-mfvi-schedule",
+    "jax_heading": "## Cavity, site replacement, and the MFVI update schedule",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "1256c795",
+    "pytorch_id": "ep-mfvi-derivation",
+    "jax_heading": "### EP: a finite tilted-moment identity",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "4b43c19f",
+    "pytorch_id": "literal-dense-derivation",
+    "jax_heading": "### The handwritten dense-layer reverse calculation",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "8bdb3096",
+    "pytorch_id": "ep-mfvi-message-equivalence",
+    "jax_heading": "## 2. Gaussian, EP and MFVI message equivalence",
+    "scope": "experiment"
+  },
+  {
+    "source_id": "79d01044",
+    "pytorch_id": "covariance-derivation",
+    "jax_heading": "### Shared factors on a directed acyclic computation graph",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "4ae49fb5",
+    "pytorch_id": "residual-integration-proof",
+    "jax_heading": "### Sampling-assisted moment propagation: integrate the nonlinear remainder",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "price-readout-messages",
+    "pytorch_id": "price-readout-messages",
+    "jax_heading": "## Readout variance messages: conditioning before approximation",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "20c537a1",
+    "pytorch_id": "learned-resnet-study",
+    "jax_heading": "## Sampling-assisted readout messages against Monte Carlo",
+    "scope": "experiment"
+  },
+  {
+    "source_id": "f8cbea9f",
+    "pytorch_id": "maxpool-math",
+    "jax_heading": "**Implementation: `layers.py`**",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "7a2c84d8",
+    "pytorch_id": "classifier-covariance-proof",
+    "jax_heading": "### Full readout covariance and a diagonal-plus-factor hidden state",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "c620ef5d",
+    "pytorch_id": "optimizer-state-derivation",
+    "jax_heading": "### Complete finite-update recurrences and their state",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "6fd4a75b",
+    "pytorch_id": "metric-definitions",
+    "jax_heading": "### Metric definitions and uncertainty decomposition",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "71dc3e66",
+    "pytorch_id": "metric-definitions",
+    "jax_heading": "### Metric definitions and uncertainty decomposition",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "ff2eb57e",
+    "pytorch_id": "mnist-results-protocol",
+    "jax_heading": "**What the MNIST runs demonstrate.**",
+    "scope": "protocol"
+  },
+  {
+    "source_id": "f1a25905",
+    "pytorch_id": "metric-definitions",
+    "jax_heading": "### Metric definitions and uncertainty decomposition",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "e67872c1",
+    "pytorch_id": "optimizer-state-derivation",
+    "jax_heading": "### Complete finite-update recurrences and their state",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "f8649488",
+    "pytorch_id": "native-cifar-summary",
+    "jax_heading": "**Reading the native summaries.**",
+    "scope": "inspection"
+  },
+  {
+    "source_id": "65a4b429",
+    "pytorch_id": "cifar-results-protocol",
+    "jax_heading": "**What the CIFAR runs demonstrate.**",
+    "scope": "experiment"
+  },
+  {
+    "source_id": "804b2f1d",
+    "pytorch_id": "transformer-derivation",
+    "jax_heading": "### Conditional Gaussian carriers and probability averaging",
+    "scope": "derivation"
+  },
+  {
+    "source_id": "0f647558",
+    "pytorch_id": "native-sst2-results",
+    "jax_heading": "## 6. GPT-2 LoRA: attention and Gaussian message boundaries",
+    "scope": "experiment"
+  },
+  {
+    "source_id": "7aaa3d85",
+    "pytorch_id": "native-sst2-results",
+    "jax_heading": "### The same Gaussian adapters in two independent implementations",
+    "scope": "experiment"
+  },
+  {
+    "source_id": "f75e194f",
+    "pytorch_id": "compact-results-protocol",
+    "jax_heading": "## 7. Conditional moment MFVI: GPT-2 and RoBERTa LoRA",
+    "scope": "protocol"
+  },
+  {
+    "source_id": "same-text-belief-reference",
+    "pytorch_id": "transferred-belief-math",
+    "jax_heading": "### The same Gaussian adapters in two independent implementations",
+    "scope": "experiment"
+  }
+]

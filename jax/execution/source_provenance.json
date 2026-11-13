@@ -1,0 +1,55 @@
+{
+  "training_source_sha256": "c59447adb8b9e11244ad9ee7454b645d5b16c11d29687f78d761525a2a9ff876",
+  "reader_source_sha256": "f14f340bb0ac97131630997d8173ddfefbc1e089475f7ab07ab788083596b31a",
+  "unchanged_modules": [
+    "src/bayesify_jax/__init__.py",
+    "src/bayesify_jax/blob.py",
+    "src/bayesify_jax/covariance.py",
+    "src/bayesify_jax/data.py",
+    "src/bayesify_jax/experiments.py",
+    "src/bayesify_jax/gaussian.py",
+    "src/bayesify_jax/gaussian_chain.py",
+    "src/bayesify_jax/gaussian_reference.py",
+    "src/bayesify_jax/gaussian_text.py",
+    "src/bayesify_jax/inference.py",
+    "src/bayesify_jax/inspection.py",
+    "src/bayesify_jax/layers.py",
+    "src/bayesify_jax/messages.py",
+    "src/bayesify_jax/models.py",
+    "src/bayesify_jax/plots.py",
+    "src/bayesify_jax/residual.py",
+    "src/bayesify_jax/training.py",
+    "src/bayesify_jax/transformers.py",
+    "src/bayesify_jax/uncertainty.py"
+  ],
+  "changed_modules": [
+    "src/bayesify_jax/heads.py",
+    "src/bayesify_jax/results.py",
+    "src/bayesify_jax/text_training.py"
+  ],
+  "changes": "Added reference-only Gaussian readout Price adjoints; added explicitly labeled ID error ROC when no OOD task exists; count previous compilation only on genuine checkpoint resumption.",
+  "modified_existing_functions": {
+    "src/bayesify_jax/heads.py": [],
+    "src/bayesify_jax/results.py": [
+      "plots"
+    ],
+    "src/bayesify_jax/text_training.py": [
+      "train"
+    ]
+  },
+  "evaluation_entrypoint_revision": {
+    "evaluate_text_serving.py": "Match array and PRNG key types during warm-up; assert no new JIT specialization during timed evaluation; reuse compiled predictor across learned beliefs. Training unchanged.",
+    "run_gaussian_text.py": "Use the same legacy PRNG key type for prediction warm-up and evaluation.",
+    "learned_fidelity.py": "Independent Gaussian-readout Price reference with batch MCSE. The final reference uses 524288 networks; reference-only refinement preserves the moment estimates and timings. Output mean is stored as mc_output_mean separately from the weight-mean signal mc_mean."
+  },
+  "additional_independent_check": "Three-step NumPy AdamW and post-mean KL recurrence matches the conditional Gaussian source split update; cycle schedule uses its declared float32 arithmetic.",
+  "final_reader_core_sha256": "85001cd9621bb036f2741f7374bb5c65ddcffb7dfd6f73b8da440ae5df36ec60",
+  "final_presentation_change": "results.py enlarges legends from 7 to 10 points for notebook/HTML/PDF readability. Training, inference, numeric records, and all mathematical functions are unchanged. The final Colab receipt tests this packaged source.",
+  "gpu_schedule_repair": {
+    "previous_core_sha256": "b0ee1b3f0e587491ac02fe570ce9e29dd325f4b59558d9644b26054ec70e5288",
+    "cause": "CUDA float32 exp2(-3) caused a one-ULP KL cycle-weight discrepancy: 0.13333332538604736 versus independently computed 0.13333334028720856.",
+    "repair": "Use ldexp for integer binary exponents. The schedule formula, independent NumPy recurrence, and strict tolerances are unchanged. Added eager/JIT exact schedule regression.",
+    "scope": "Numerical implementation repair after the native benchmark runs; saved learned beliefs/results were not retrained or replaced."
+  },
+  "snapshot_comparison_scope": "The unchanged/changed module lists compare the two archived source snapshots above. Later presentation and GPU numerical repairs are recorded separately below."
+}

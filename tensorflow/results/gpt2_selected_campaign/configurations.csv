@@ -1,0 +1,6 @@
+key,optimizer,mean_lr,variance_lr,tau,weight_decay,prior_precision,initial_variance,batch_size,training_epochs,selected_epoch
+adamw,AdamW,0.0003,,,0.01,,,32,3,1
+moment_mfvi_accuracy,Vadam family,0.0003,,0.0001,,2500,1e-06,32,1,1
+moment_mfvi_nll,Vadam family,0.0003,,3e-05,,2500,1e-06,32,1,1
+sampled_mfvi,Vadam family,0.0003,,0.001,,2500,1e-06,32,3,1
+moment_ep,"Adam, mean/log variance",0.0003,0.01,0.01,,2500,1e-06,32,3,1

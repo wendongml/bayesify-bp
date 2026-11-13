@@ -1,0 +1,59 @@
+{
+  "method": "mfvi",
+  "networks": 524288,
+  "independent_antithetic_pairs": 262144,
+  "batches": 8192,
+  "MC_compile_seconds": 20.615237305995834,
+  "MC_execution_seconds": 78.24361759799649,
+  "readout_relative_MCSE": {
+    "mean": 0.04265454489836505,
+    "centered": 0.04877466359971155
+  },
+  "output_relative_MCSE": {
+    "mean": 0.00010359080050934733,
+    "variance": 0.002554558532666764
+  },
+  "gradient_estimator": "Gaussian readout Price identity; complete-network draws",
+  "timing_scope": "MC forward plus readout adjoint; moment full forward/backward",
+  "test_index": 0,
+  "seed": 41,
+  "checkpoint": "best validation NLL",
+  "rows": [
+    {
+      "rank": 1,
+      "compile_seconds": 32.64075379499991,
+      "forward_backward_seconds": 0.009779567997611593,
+      "mean_relative_error": 0.029694910157479444,
+      "covariance_relative_error": 1.0181807826892597,
+      "mean_signal_relative_error": 0.9935810993623595,
+      "centered_signal_relative_error": 0.9959561462046839
+    },
+    {
+      "rank": 4,
+      "compile_seconds": 33.69710693199886,
+      "forward_backward_seconds": 0.010445447998790769,
+      "mean_relative_error": 0.023422234508453654,
+      "covariance_relative_error": 1.463481597123409,
+      "mean_signal_relative_error": 0.7481157982772934,
+      "centered_signal_relative_error": 4.9593820715833505
+    },
+    {
+      "rank": 16,
+      "compile_seconds": 35.51999168600014,
+      "forward_backward_seconds": 0.010414320997369941,
+      "mean_relative_error": 0.011967379220896105,
+      "covariance_relative_error": 0.5774329804421569,
+      "mean_signal_relative_error": 0.7009650767976349,
+      "centered_signal_relative_error": 0.8508944633927232
+    },
+    {
+      "rank": 64,
+      "compile_seconds": 37.25702319700213,
+      "forward_backward_seconds": 0.014034538999112556,
+      "mean_relative_error": 0.0058712189312274095,
+      "covariance_relative_error": 0.23540732869294517,
+      "mean_signal_relative_error": 0.5167802317649064,
+      "centered_signal_relative_error": 0.832693179921663
+    }
+  ]
+}

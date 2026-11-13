@@ -1,0 +1,30 @@
+{
+  "architecture": "lenet",
+  "method": "moment_ep",
+  "seed": 41,
+  "dataset": "dirty",
+  "epochs": 30,
+  "batch": 128,
+  "training": {
+    "method": "ep",
+    "approximation": "moment",
+    "observations": 110000,
+    "learning_rate": 0.001,
+    "variance_learning_rate": 0.001,
+    "temperature": 0.01,
+    "power": 1.0,
+    "samples": 1,
+    "weight_decay": 0.0,
+    "rank": 0,
+    "direction_seed": 744,
+    "full_readout": true,
+    "curvature_refresh": 2,
+    "adam_beta2": 0.99
+  },
+  "device": "NVIDIA L4",
+  "train_n": 110000,
+  "validation_n": 10000,
+  "selection": "minimum validation predictive NLL",
+  "limit": 0,
+  "torch_version": "2.14.1+cu130"
+}

@@ -1,0 +1,22 @@
+{
+  "tensorflow": "2.16.2",
+  "keras": "3.15.1",
+  "parameters": 125055894,
+  "trainable_parameters": 1000854,
+  "nontrainable_parameters": 124055040,
+  "architecture": "roberta_lora8",
+  "builder": "build_roberta_lora",
+  "nodes": 150,
+  "max_forward_difference": 0,
+  "max_node_difference": 0,
+  "reference_max_difference": 2.47955322265625e-05,
+  "reference_checks": 28,
+  "all_mean_variables_shared": true,
+  "gaussian_mean_parameters": 147456,
+  "point_parameters": 853398,
+  "training_performed": false,
+  "example_blocks": [
+    "encoder_0"
+  ],
+  "input_lengths": [8, 5]
+}

@@ -1,0 +1,7 @@
+{
+  "source": "backward_repair_20261105/results/confirmed/confirmation_summary.csv",
+  "source_sha256": "350bec165215c4689d3bd896c535f1d39c0ec7fdd88d128e4f6accac02da16bb",
+  "scope": "R/TensorFlow paired nonlinear residual; 236 selected coordinates across weight blocks; four predeclared CIFAR-10 inputs",
+  "table_query": "index == 0; signals dm, ds",
+  "warning": "Raw-second agreement does not establish centered-variance agreement; see centered and its MCSE in the CSV."
+}

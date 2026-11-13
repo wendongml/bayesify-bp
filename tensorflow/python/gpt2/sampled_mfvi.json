@@ -1,0 +1,17 @@
+{
+  "seed": 41,
+  "variance": 1e-06,
+  "precision": 2500,
+  "limit": 0,
+  "epochs": 3,
+  "batch": 32,
+  "decay": 0.01,
+  "max_hours": 1,
+  "schedule": "warmup_cosine",
+  "validation_draws": 16,
+  "method": "sampled_vadam",
+  "normalization": "likelihood_ema_initial_zero",
+  "lr": 0.0003,
+  "tau": 0.001,
+  "name": "normalized_sampled_vadam_lr0.0003_tau0.001_s41"
+}

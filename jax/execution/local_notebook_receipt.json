@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "Clean local standalone notebook execution with embedded native benchmark records; final full-results Colab execution pending.",
+  "seconds": 472.2470968699781,
+  "cells": 80,
+  "input_notebook_sha256": "2a6932d056e3059dba67f309ac5310286c736662eab6939aad3f91163b66fc57",
+  "executed_notebook_sha256": "2d17c4ea15dc8e4d1ec7a4da3bd533b692cdba603712fd7cf7e893d541be603f",
+  "checks": {
+    "tests_run": 53,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 324.70589381002355,
+    "jax": "0.4.38",
+    "versions": {
+      "jax": "0.4.38",
+      "flax": "0.10.4",
+      "optax": "0.2.4",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1"
+    },
+    "python": "3.11.4",
+    "source_sha256": "d868c2f435bc07cd093d0fcb3f9bb8e13cd04f791b70cfe743ce6deaf93fe82e",
+    "utc": "2026-11-11T19:33:10.854932+00:00",
+    "devices": [
+      "TFRT_CPU_0"
+    ],
+    "status": "PASS"
+  }
+}

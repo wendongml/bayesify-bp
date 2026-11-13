@@ -1,0 +1,11 @@
+{
+  "python": "3.13.16",
+  "versions": {
+    "jax": "0.12.0.1",
+    "flax": "0.12.12",
+    "jax2onnx": "0.19.0",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1"
+  },
+  "scope": "Isolated ONNX export environment; training and numerical checks use their separately pinned environment."
+}

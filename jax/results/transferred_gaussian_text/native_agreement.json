@@ -1,0 +1,63 @@
+{
+  "scope": "Saved Gaussian A+B beliefs, same base/input/token targets; no training or optimizer.",
+  "arithmetic": "float32; highest matmul precision; no TF32",
+  "rows": [
+    {
+      "method": "mfvi",
+      "quantity": "probabilities",
+      "max_abs": 9.000301361083984e-06,
+      "relative_l2": 1.3938226857135305e-06,
+      "passed": true
+    },
+    {
+      "method": "mfvi",
+      "quantity": "objective",
+      "max_abs": 5.066394805908203e-07,
+      "relative_l2": 3.9290701150651295e-06,
+      "passed": true
+    },
+    {
+      "method": "mfvi",
+      "quantity": "mean",
+      "max_abs": 9.512528777122498e-06,
+      "relative_l2": 9.919158336948109e-06,
+      "passed": true
+    },
+    {
+      "method": "mfvi",
+      "quantity": "variance",
+      "max_abs": 3.7670135498046875e-05,
+      "relative_l2": 5.11741529061037e-06,
+      "passed": true
+    },
+    {
+      "method": "ep",
+      "quantity": "probabilities",
+      "max_abs": 6.139278411865234e-06,
+      "relative_l2": 1.306182980442827e-06,
+      "passed": true
+    },
+    {
+      "method": "ep",
+      "quantity": "objective",
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "passed": true
+    },
+    {
+      "method": "ep",
+      "quantity": "mean",
+      "max_abs": 2.9602088034152985e-06,
+      "relative_l2": 5.378184687378401e-06,
+      "passed": true
+    },
+    {
+      "method": "ep",
+      "quantity": "variance",
+      "max_abs": 1.71661376953125e-05,
+      "relative_l2": 7.759328518903654e-06,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

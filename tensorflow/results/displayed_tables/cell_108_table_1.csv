@@ -1,0 +1,6 @@
+Method,Optimizer,Mean_LR,Variance_LR,KL_strength,Epochs,Selected_epoch,Prediction_draws
+ordinary,AdamW,0.003,NA,NA,100,19,1
+sampled_mfvi,reference Vadam,0.003,NA,0.001,100,99,16
+moment_mfvi,reference Vadam,0.003,NA,0.001,100,92,0
+sampled_ep,Adam on mean/log variance,0.003,0.003,0.001,100,40,16
+moment_ep,Adam on mean/log variance,0.003,0.003,0.010,100,84,0

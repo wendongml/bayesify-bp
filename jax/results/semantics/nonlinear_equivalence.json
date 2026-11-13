@@ -1,0 +1,42 @@
+[
+  {
+    "method": "EP",
+    "quantity": "activation mean signal",
+    "maximum_error": 1.6479873021779667e-17
+  },
+  {
+    "method": "EP",
+    "quantity": "activation variance sensitivity",
+    "maximum_error": 5.204170427930421e-18
+  },
+  {
+    "method": "EP",
+    "quantity": "weight mean signal",
+    "maximum_error": 1.734723475976807e-18
+  },
+  {
+    "method": "EP",
+    "quantity": "weight variance sensitivity",
+    "maximum_error": 5.421010862427522e-20
+  },
+  {
+    "method": "MFVI",
+    "quantity": "activation mean signal",
+    "maximum_error": 1.3877787807814457e-17
+  },
+  {
+    "method": "MFVI",
+    "quantity": "activation variance sensitivity",
+    "maximum_error": 6.938893903907228e-18
+  },
+  {
+    "method": "MFVI",
+    "quantity": "weight mean signal",
+    "maximum_error": 1.734723475976807e-18
+  },
+  {
+    "method": "MFVI",
+    "quantity": "weight variance sensitivity",
+    "maximum_error": 8.131516293641283e-20
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "renderer": "Netron 9.3.5",
+  "view": {
+    "orientation": "horizontal",
+    "weights": "hidden"
+  },
+  "renders": [
+    {
+      "name": "cifar_densenet40",
+      "source_onnx": "onnx/cifar_densenet40.onnx",
+      "png": "netron/cifar_densenet40.png",
+      "png_sha256": "0a472ff472bca01e4b426bb1ba5fc1469be7da03f4c25032baee4f5d488aa1b8",
+      "pixels": [
+        26218,
+        106
+      ],
+      "svg": "netron/cifar_densenet40.svg",
+      "svg_sha256": "573a072b65e8ddc42e8dd050e5c45bc05f71761692a4e70ad3c340d5dd2addfb",
+      "source_onnx_sha256": "dfd8d103f00cbf9b2b17571db72eda6846428d712d795605ea8ef03200e77608"
+    },
+    {
+      "name": "cifar_resnet20",
+      "source_onnx": "onnx/cifar_resnet20.onnx",
+      "png": "netron/cifar_resnet20.png",
+      "png_sha256": "85875225a96ba82e49ec17abc299535840a0f4b6b0ede730acc1ae72ea410b06",
+      "pixels": [
+        11212,
+        440
+      ],
+      "svg": "netron/cifar_resnet20.svg",
+      "svg_sha256": "1dbb691ad5629d4edf7b89ea2c148cd6de59175bcb6d95ee0a3213c877a52350",
+      "source_onnx_sha256": "87dac793136a72af98f796f0727c1c117b5880c3836a94fe3ea69c78036c1eb1"
+    },
+    {
+      "name": "mnist_lenet",
+      "source_onnx": "onnx/mnist_lenet.onnx",
+      "png": "netron/mnist_lenet.png",
+      "png_sha256": "703bea8479e6e906bb1f3aca740c46b074b37c787c6d7f761c5622fc48fb357a",
+      "pixels": [
+        2056,
+        72
+      ],
+      "svg": "netron/mnist_lenet.svg",
+      "svg_sha256": "7a33fb6616f2b19e50b155afc527ba35ab50617bdcf1eb7003479524659f91f7",
+      "source_onnx_sha256": "ee9138b9f12b5fcd30287784bb8d49fbe475a8d98cfeeb53ebcc6a29fab6b40a"
+    },
+    {
+      "name": "mnist_mlp",
+      "source_onnx": "onnx/mnist_mlp.onnx",
+      "png": "netron/mnist_mlp.png",
+      "png_sha256": "a4b3a74fb7be46bec43f0b2dc2b429d9420a086accda5f63f296a9a7f046a2ec",
+      "pixels": [
+        1412,
+        72
+      ],
+      "svg": "netron/mnist_mlp.svg",
+      "svg_sha256": "f944f2d0f394de2b69427e03d7c319a7a55bf0b46da69636fe725fe4b6b001b4",
+      "source_onnx_sha256": "d0c59f833f1312685c927fc7dafcef415923f6d016d0a84f156da445b9a3624d"
+    }
+  ]
+}

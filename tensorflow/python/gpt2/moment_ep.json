@@ -1,0 +1,19 @@
+{
+  "seed": 41,
+  "variance": 1e-06,
+  "precision": 2500,
+  "limit": 0,
+  "epochs": 3,
+  "batch": 32,
+  "decay": 0.01,
+  "max_hours": 2,
+  "rank": 1,
+  "moment_backend": "adjoint_contraction",
+  "lr": 0.0003,
+  "variance_lr": 0.01,
+  "schedule": "warmup_cosine",
+  "validation_draws": 16,
+  "method": "moment_power_ep",
+  "tau": 0.01,
+  "name": "full_field_moment_power_ep_tau0.01_vlr0.01_s41"
+}

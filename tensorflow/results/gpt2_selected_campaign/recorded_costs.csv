@@ -1,0 +1,8 @@
+key,method,implementation,seed,selected_epoch,training_seconds,full_run_seconds,inference_seconds,network_draws,directions
+adamw,Ordinary AdamW,PyTorch,41,1,112.72721633099991,337.2365149469997,0.6191602690000764,1,0
+moment_mfvi_accuracy,Moment MFVI (accuracy),PyTorch,41,1,200.57395936399917,200.57395936399917,1.5603865819994098,0,0
+moment_mfvi_nll,Moment MFVI (NLL),PyTorch,41,1,198.78324565000003,198.78324565000003,1.564361929998995,0,0
+sampled_mfvi,Sampled MFVI (16 draws),PyTorch,41,1,125.79872079699999,376.6064221860006,9.869964749999781,16,0
+moment_ep,Moment EP (first order),PyTorch,41,1,608.7914935520002,1829.0293743379998,1.5496507340003518,0,0
+ep_r4,Same EP belief (4 directions),PyTorch,41,1,608.7914935520002,1829.0293743379998,4.150834813666431,0,4
+ep_same_belief_mc64,Same EP belief (64 draws),PyTorch,41,1,608.7914935520002,1829.0293743379998,39.499598462999984,64,0

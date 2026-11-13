@@ -1,0 +1,92 @@
+[
+  {
+    "id": "local-gaussian-factor",
+    "text": "## Local Gaussian factor: the two pipelines in the original tutorial\n\nStart with one **frozen** linearized module, $h=c+Ax+Bw$, with independent\nbeliefs $x\\sim\\mathcal N(m_x,P_x)$ and $w\\sim\\mathcal N(m_w,P_w)$.\nIts forward moments are $m_h=c+Am_x+Bm_w$ and\n$P_h=AP_xA^\\top+BP_wB^\\top$. This is an exact Gaussian model; keeping the\nbilinear term $\\delta W\\,\\delta x$ would define a different, nonlinear model.\n\n**Pipeline A: explicit messages.** Given downstream target moments\n$(m_h^+,P_h^+)$, form $K_x=P_xA^\\top P_h^{-1}$. Gaussian conditioning and the\nlaw of total covariance give\n$$m_x^+=m_x+K_x(m_h^+-m_h),\\qquad\nP_x^+=P_x+K_x(P_h^+-P_h)K_x^\\top.$$\nThe weight message uses $K_w=P_wB^\\top P_h^{-1}$ in the same equations.\nIndeed, $x\\mid h$ has mean $m_x+K_x(h-m_h)$ and covariance\n$P_x-K_xP_hK_x^\\top$; integrating over the new law of $h$ proves both formulas.\nThe downstream factor must act through $h$ for this replacement to be valid.\n\n**Pipeline B: autodiff and Fisher reconstruction.** Write $d=m_h^+-m_h$.\nFor a scalar objective being **maximized**, seed\n$g_h=P_h^{-1}d$ and\n$G_h=\\tfrac12P_h^{-1}(P_h^+-P_h+dd^\\top)P_h^{-1}$.\nUse ordinary local VJPs, then reconstruct\n$m_x^+=m_x+P_xg_x$ and\n$P_x^+=P_x+2P_xG_xP_x-(P_xg_x)(P_xg_x)^\\top$.\nSubstitution of $g_x=A^\\top g_h$, $G_x=A^\\top G_hA$ cancels the two\n$K_xdd^\\top K_x^\\top$ terms and recovers Pipeline A. Here $G_x$ is the covariance adjoint, whereas $K_x$ is the smoothing gain.\nFor a minimized loss, negate both objective adjoints.\n\nThis comparison concerns **activation and weight-belief messages**, before any\nAdam, canonical VI, or site-replacement update. The exact-Gaussian plots in\nSection 2 check both kinds of belief. Nonlinear approximation quality is a\nseparate experiment in Section 3.\n\n",
+    "implementations": {
+      "tensorflow": {
+        "before": "## The Gaussian coordinate bridge",
+        "code": "- `R/layers.R`: `moment_affine_gaussian`\n- `R/gaussian.R`: Gaussian coordinate conversions"
+      },
+      "pytorch": {
+        "before": "### Why a gradient becomes a moment message",
+        "code": "- `src/bayesify_torch/gaussian_chain.py`: exact Gaussian reference and candidate\n- `src/bayesify_torch/geometry.py`: `encode_full`, `decode_full`"
+      },
+      "jax": {
+        "before": "### Why a gradient becomes a moment message",
+        "code": "- `src/bayesify_jax/gaussian_chain.py`: Gaussian chain candidate\n- `src/bayesify_jax/gaussian_reference.py`: independent Gaussian reference"
+      }
+    }
+  },
+  {
+    "id": "layer-equations-and-code",
+    "text": "## Layer equations and their literal reverse messages\n\nEP and MFVI share the forward layers. Their heads and finite belief updates\nare different. Here $V_W$ contains **variances**, not standard deviations.\nFor independent coordinates and independent input/weight blocks, the affine\nrule is $m_y=m_xM_W+m_b$ and\n$v_y=v_xM_W^{\\odot2}+(m_x^{\\odot2}+v_x)V_W+v_b$.\nThe rule uses first and second moments of the input; it does **not** assume\nthat the observed input data follow a Gaussian distribution.\n\nFor incoming Euclidean adjoints $(a,b)=(\\partial\\Phi/\\partial m_y,\n\\partial\\Phi/\\partial v_y)$, the literal affine reverse is\n$$\\begin{aligned}\ng_{m_x}&=aM_W^\\top+2m_x\\odot(bV_W^\\top), &\ng_{v_x}&=b(M_W^{\\odot2}+V_W)^\\top,\\\\\ng_{M_W}&=m_x^\\top a+2M_W\\odot(v_x^\\top b), &\ng_{V_W}&=(m_x^{\\odot2}+v_x)^\\top b.\n\\end{aligned}$$\nBias adjoints sum $(a,b)$ over examples. These equations follow by\ndifferentiating each summand in the forward mean and variance. Encoding them\nwith the same parent Fisher blocks gives literal messages; applying a local\nVJP to the forward formula gives projected messages. They must agree for the\nsame declared formula. Convolution uses the identical product rule with\nconvolution/input-transpose/filter-transpose operators replacing the matrix products.\n\nFor $X\\sim\\mathcal N(m,v)$, let $s=\\sqrt v$, $a=m/s$, and let\n$\\phi,\\Phi$ be the standard-normal density and CDF. ReLU has\n$M=m\\Phi(a)+s\\phi(a)$,\n$S=(m^2+v)\\Phi(a)+ms\\phi(a)$, and $V=S-M^2$.\nThese follow by integrating $x$ and $x^2$ over $x>0$.\nUseful derivatives are $M_m=\\Phi(a)$, $M_v=\\phi(a)/(2s)$,\n$S_m=2M$, and $S_v=\\Phi(a)$; hence $V_j=S_j-2MM_j$.\nAt $v=0$, use the deterministic ReLU limit instead of dividing by zero.\nGaussian input is an **activation closure**, not a claim about the dataset\nor the exact nonlinear network's joint distribution.\n\nAverage pooling applies a linear map $P$: $m'=Pm$, $C'=PCP^\\top$.\nDropping correlations yields $v'_j=\\sum_iP_{ji}^2v_i$. For two independent\nGaussian pooling candidates, put $s^2=v_1+v_2$ and $a=(m_1-m_2)/s$.\nThen $E\\max(X_1,X_2)=m_1\\Phi(a)+m_2\\Phi(-a)+s\\phi(a)$ and\n$E\\max(X_1,X_2)^2=(v_1+m_1^2)\\Phi(a)+(v_2+m_2^2)\\Phi(-a)\n+(m_1+m_2)s\\phi(a)$. Repeated pairwise Gaussian projection is an\napproximation to a larger max-pooling window, not an exact Gaussian law.\n\nPadding/flattening only rearrange moments. A residual addition requires\n$C_{x+y}=C_x+C_y+C_{xy}+C_{yx}$; concatenation retains these as off-diagonal\nblocks. The shared-factor extension carries them through reused directions.\nAt $y=x+x$, $C_y=4C_x$, not $2C_x$. Backward contributions to the same\nparent must be **summed before its update**. These checks distinguish a\nshared computation graph from fictitious independent copies of a variable.\n\nBatch normalization with frozen statistics is affine; estimating statistics\nfrom an uncertain minibatch introduces additional dependencies. LayerNorm,\nattention, GELU and LoRA are treated by their declared local moment/directional\nmaps in Sections 6–7. Their VJP agreement checks the derivative of that map;\nit does not prove that the map is an exact nonlinear expectation.\n\n",
+    "implementations": {
+      "tensorflow": {
+        "before": "## Shared forward layers",
+        "code": "- `R/layers.R`: `moment_dense`, `moment_conv2d`, `moment_relu`\n- `R/messages.R`: `mfvi_dense_backward`, `mfvi_conv2d_backward`, `mfvi_relu_backward`\n- `R/models.R`: `mnist_gaussian_max`, `mnist_pool`, `bn_node`, `layer_norm`, `attention`"
+      },
+      "pytorch": {
+        "before": "### The handwritten dense-layer reverse",
+        "code": "- `src/bayesify_torch/layers.py`: `dense_moments`, `dense_literal_backward`\n- `src/bayesify_torch/layers.py`: `conv2d_moments`, `conv2d_literal_backward`\n- `src/bayesify_torch/layers.py`: `relu_moments`, `relu_literal_backward`, `gaussian_max_pair`"
+      },
+      "jax": {
+        "before": "### The handwritten dense-layer reverse",
+        "code": "- `src/bayesify_jax/layers.py`: `dense`, `dense_backward`, `convolution`, `convolution_backward`\n- `src/bayesify_jax/layers.py`: `relu`, `relu_backward`, `max_pair`, `max_pool_backward`\n- `src/bayesify_jax/layers.py`: `normalization`, `normalization_backward`"
+      }
+    }
+  },
+  {
+    "id": "message-carriers",
+    "text": "## Literal messages, projected messages, and custom-gradient carriers\n\nThe original tutorial presents custom-gradient and ordinary-autodiff graphs.\nThe essential distinction is the **calculation carried backward**, not the API\nused to transport it. With a fixed forward snapshot, the shared contract is\n$$d_{\\rm parent}=\\operatorname{encode}_{\\rm parent}\n\\left[J_{\\rm moments}^{\\top}\n\\operatorname{decode}_{\\rm child}(d_{\\rm child})\\right].$$\nA literal implementation writes the local derivatives explicitly. A projected\nimplementation asks the framework for the VJP of the **same** moment formula.\nThe released implementations also expose this as an explicit reverse traversal,\nso its messages can be inspected before an optimizer runs.\n\nA custom-gradient carrier can return moment signals in slots normally reserved\nfor Euclidean gradients, but those slots then have a new contract: the next\nmodule must decode them. Mixing such a carrier with an ordinary loss/optimizer\nwithout the conversion is incorrect. The explicit traversal avoids this\nimplicit convention. Deterministic inputs receive an ordinary input adjoint;\nno inverse zero-covariance Fisher block is formed.\n\nFor EP, $\\Phi=\\log E_{q_{\\rm cav}}[f]$ yields tilted sufficient-statistic\nchanges when the expectation is exact. For MFVI,\n$\\Phi=E_q[\\log f]$ gives a likelihood natural-gradient direction, not that\nEP tilted distribution. Both can use the same local transport. Their finite\nupdates below remain distinct. The literal-versus-projected comparisons use\nmatched objectives, coordinates, beliefs and schedules; the Monte Carlo plots\nthen test how well the chosen nonlinear expectation is approximated.\n\n",
+    "implementations": {
+      "tensorflow": {
+        "before": "## Exact Gaussian MLP:",
+        "code": "- `R/layers.R`: `moment_graph_forward`, `moment_graph_reverse`\n- `R/messages.R`: mfvi_projected and literal backward functions"
+      },
+      "pytorch": {
+        "before": "### EP: a finite tilted-moment identity",
+        "code": "- `src/bayesify_torch/graph.py`: `MomentDAG.forward_moments`, `GraphPass.backward`\n- `src/bayesify_torch/layers.py`: _projected_local and literal backward functions"
+      },
+      "jax": {
+        "before": "### Why smoothing and backward moment updates coincide",
+        "code": "- `src/bayesify_jax/messages.py`: `forward`, `backward`\n- `src/bayesify_jax/layers.py`: `projected`, `literal_autodiff`"
+      }
+    }
+  },
+  {
+    "id": "ep-sites-and-mfvi-schedule",
+    "text": "## Cavity, site replacement, and the MFVI update schedule\n\nLet $q(u)\\propto p_0(u)\\prod_n\\tilde f_n(u)$, with Gaussian canonical\ncoordinates $\\eta=(h,-\\Lambda/2)$. At EP factor $n$, remove its existing site:\n$\\eta^{\\setminus n}=\\eta_q-\\eta_n$. Compute\n$\\hat p_n\\propto f_nq^{\\setminus n}$, match its retained sufficient statistics,\nand set $\\eta_n^{\\rm target}=\\eta_{\\rm proj}-\\eta^{\\setminus n}$.\nA damped replacement is\n$\\eta_n^+=(1-\\rho)\\eta_n+\\rho\\eta_n^{\\rm target}$ and\n$\\eta_q^+=\\eta^{\\setminus n}+\\eta_n^+$.\nThis follows directly from division/multiplication of exponential-family\nfactors. Revisiting a factor without removing its previous site counts it twice.\n\nThe exact normalizer identity uses a downstream factor held fixed when\n differentiating the cavity: $\\nabla_\\eta\\log Z=E_{\\hat p}T-E_qT$.\nIt follows from $\\nabla_\\eta\\log q=T-E_qT$, under the usual integrability\ncondition allowing differentiation under the integral. A surrogate Gaussian\nnormalizer still has a computable derivative, but its derivative is not\ntherefore the exact nonlinear tilted moment. Tied power-EP training in the\nbenchmark chapters declares its own energy and external field; it is not\nsilently relabeled as independent site EP.\n\nMFVI instead maximizes $E_q\\log p(D\\mid u)-\\mathrm{KL}(q\\Vert p_0)$.\nFor diagonal $q$, write $\\tau=1/v$, $h=m/v$. With likelihood adjoints\n$(g_m,g_v)$, a canonical step is\n$\\tau^+=(1-\\rho)\\tau+\\rho(\\tau_0-2g_v)$ and\n$h^+=(1-\\rho)h+\\rho(h_0+g_m-2m g_v)$, elementwise.\nIndeed $s=v+m^2$ implies $\\partial_s\\Phi=g_v$ and\n$\\partial_m\\Phi|_s=g_m-2mg_v$; adding the prior/entropy contribution\n$\\eta_0-\\eta$ gives these two equations.\nFor a Gaussian target, a unit **sequential coordinate** step recovers CAVI.\nParallel unit steps need not converge. Neither this statement nor monotonic\nELBO improvement guarantees monotonic held-out predictive NLL improvement.\n\n",
+    "implementations": {
+      "tensorflow": {
+        "before": "## MFVI: the same bridge",
+        "code": "- `R/messages.R`: `mfvi_canonical`\n- `R/inference.R`: benchmark-specific updates; exact EP checks in R/checks.R"
+      },
+      "pytorch": {
+        "before": "### The Gaussian heads already differ",
+        "code": "- `src/bayesify_torch/inference.py`: `apply_mfvi`, `apply_global_ep_tilt`\n- `src/bayesify_torch/optimizers.py`: benchmark-specific updates"
+      },
+      "jax": {
+        "before": "### The Gaussian heads already differ",
+        "code": "- `src/bayesify_jax/inference.py`: `ep_replace`\n- `src/bayesify_jax/gaussian.py`: `mfvi_update`"
+      }
+    }
+  },
+  {
+    "id": "price-readout-messages",
+    "text": "## Readout variance messages: conditioning before approximation\n\nFor an independent Gaussian readout, condition on its hidden input $h$ and\nwrite $z_j=\\sum_i W_{ji}h_i+b_j$. The hidden distribution need not be Gaussian.\nFor a smooth scalar likelihood function $F$, Gaussian integration by parts gives\n$\\partial_m E[F]=E[\\partial_wF]$ and\n$\\partial_v E[F]=\\tfrac12 E[\\partial_w^2F]$. Indeed,\n$\\partial_mq=-\\partial_wq$ and $\\partial_vq=\\tfrac12\\partial_w^2q$;\nintegrating once or twice moves derivatives from the Gaussian density onto\n$F$, with vanishing boundary terms. Applying the affine chain rule conditional\non $h$, then averaging over the independent upstream weights, proves\n$$\\partial_{m_{ji}}E[F]=E[h_i\\partial_{z_j}F],\\qquad\n\\partial_{v_{ji}}E[F]=\\tfrac12E[h_i^2\\partial_{z_j}^2F].$$\nLet $p=\\operatorname{softmax}(z)$, $r_j=1_{j=y}-p_j$, and\n$H_{jj}=-p_j(1-p_j)$. For MFVI, $F=\\log p_y$ has derivatives\n$r_j,H_{jj}$. For EP, $F=p_y$ has derivatives\n$p_y r_j,p_y(H_{jj}+r_j^2)$. Average the EP derivatives and $p_y$ separately,\nthen divide by $Z=E[p_y]$. Averaging log-probability derivatives instead would\nchange the objective to MFVI. Encode the resulting adjoints as\n$d_m=v\\odot g_m$ and $d_s-2m\\odot d_m=2v^2\\odot g_v$.\n\nThis readout identity avoids the often noisy pathwise variance estimator\n$E[(\\partial_wF)\\epsilon/(2\\sqrt v)]$. Both estimate the same derivative\nunder their regularity assumptions; their finite-sample variances differ.\nThe independent affine readout assumption is essential: correlated upstream\nand readout weights need their joint conditional calculation.\n\nThe paired residual identity can be applied to these derivatives too:\n$E_q[A]=E_q[A_0]+E_r[(q/r)(A-A_0)]$, where $A_0$ is a frozen surrogate\nand the two paths use the same perturbation. EP corrects its normalizer and\nunnormalized derivatives before division. A finite-sample EP ratio remains\nbiased; agreement with this identity does not prove exact finite-sample EP.\nThis is an integration refinement within a single Gaussian belief, not a\nnew optimizer or a mixture posterior. Forward covariance retention and\nnonlinear head integration should be assessed separately.\n\n",
+    "implementations": {
+      "tensorflow": {
+        "before": "## Conditional readout: implementation",
+        "code": "`R/inference.R`: `sampled_readout_adjoint`"
+      },
+      "pytorch": {
+        "before": "## Conditional readout: implementation",
+        "code": "`src/bayesify_torch/heads.py`: `sampled_readout_adjoint`; independent Hessian/quadrature tests in `tests/test_readout_price.py`"
+      },
+      "jax": {
+        "before": "## Conditional readout: implementation",
+        "code": "`src/bayesify_jax/heads.py`: `sampled_readout_adjoint`"
+      }
+    }
+  }
+]

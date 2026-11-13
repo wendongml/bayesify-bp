@@ -1,0 +1,54 @@
+[
+  {
+    "architecture": "mlp",
+    "parameters": 478410,
+    "shape": [
+      1,
+      28,
+      28,
+      1
+    ]
+  },
+  {
+    "architecture": "lenet",
+    "parameters": 61706,
+    "shape": [
+      1,
+      28,
+      28,
+      1
+    ]
+  },
+  {
+    "architecture": "resnet20",
+    "parameters": 269722,
+    "shape": [
+      1,
+      32,
+      32,
+      3
+    ]
+  },
+  {
+    "architecture": "densenet40",
+    "parameters": 1019722,
+    "shape": [
+      1,
+      32,
+      32,
+      3
+    ]
+  },
+  {
+    "architecture": "gpt2",
+    "base_parameters": 124439808,
+    "adapter_mean_parameters": 147456,
+    "random_initialization_for_inspection": true
+  },
+  {
+    "architecture": "roberta",
+    "base_parameters": 124760982,
+    "adapter_mean_parameters": 294912,
+    "random_initialization_for_inspection": true
+  }
+]

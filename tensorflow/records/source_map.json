@@ -1,0 +1,708 @@
+{
+  "notebook": "README.ipynb",
+  "counting": "Physical source lines including comments and blanks. All notebook code cells are native R; embedded original Python source is identified separately.",
+  "definitions": [
+    {
+      "cell": 5,
+      "file": "python/keras_graph.py",
+      "start": 1,
+      "end": 126,
+      "visible": false,
+      "lines": 126,
+      "sha256": "4659a11eeeea6fb0350dafd25923c899d6ba269aa9baad7439588694e35e6304"
+    },
+    {
+      "cell": 6,
+      "file": "python/run_original.py",
+      "start": 1,
+      "end": 48,
+      "visible": false,
+      "lines": 48,
+      "sha256": "0a08228d5e236bc856486a63e2d40f35b8097234a3d2ccb2e91373710877b484"
+    },
+    {
+      "cell": 10,
+      "file": "R/setup.R",
+      "start": 2,
+      "end": 32,
+      "visible": false,
+      "lines": 31,
+      "sha256": "21dfe3858e9b5da34e9db1d66c9ae43f05a034ef6ff65986ea68686e25d620c4"
+    },
+    {
+      "cell": 11,
+      "file": "R/plots.R",
+      "start": 18,
+      "end": 176,
+      "visible": false,
+      "lines": 159,
+      "sha256": "784550c7cc4f36194b59110a7188feadc8c104eddba76a7d219c5ef92585fb79"
+    },
+    {
+      "cell": 12,
+      "file": "R/plots.R",
+      "start": 2,
+      "end": 15,
+      "visible": false,
+      "lines": 14,
+      "sha256": "784550c7cc4f36194b59110a7188feadc8c104eddba76a7d219c5ef92585fb79"
+    },
+    {
+      "cell": 13,
+      "file": "R/plots.R",
+      "start": 208,
+      "end": 277,
+      "visible": false,
+      "lines": 70,
+      "sha256": "784550c7cc4f36194b59110a7188feadc8c104eddba76a7d219c5ef92585fb79"
+    },
+    {
+      "cell": 16,
+      "file": "R/gaussian.R",
+      "start": 2,
+      "end": 40,
+      "visible": true,
+      "lines": 39,
+      "sha256": "89442539d8302f08c3a21ea8a0ca948a79c497c6895e43e5f5922dd90d95960d"
+    },
+    {
+      "cell": 19,
+      "file": "R/layers.R",
+      "start": 2,
+      "end": 86,
+      "visible": true,
+      "lines": 85,
+      "sha256": "779f40dc99682705a8c5b1dd53e044f28a779f7e965e01a67bd5935cac48178b"
+    },
+    {
+      "cell": 21,
+      "file": "R/layers.R",
+      "start": 89,
+      "end": 183,
+      "visible": true,
+      "lines": 95,
+      "sha256": "779f40dc99682705a8c5b1dd53e044f28a779f7e965e01a67bd5935cac48178b"
+    },
+    {
+      "cell": 26,
+      "file": "R/gaussian.R",
+      "start": 43,
+      "end": 106,
+      "visible": true,
+      "lines": 64,
+      "sha256": "89442539d8302f08c3a21ea8a0ca948a79c497c6895e43e5f5922dd90d95960d"
+    },
+    {
+      "cell": 27,
+      "file": "R/gaussian.R",
+      "start": 109,
+      "end": 155,
+      "visible": true,
+      "lines": 47,
+      "sha256": "89442539d8302f08c3a21ea8a0ca948a79c497c6895e43e5f5922dd90d95960d"
+    },
+    {
+      "cell": 28,
+      "file": "R/checks.R",
+      "start": 2,
+      "end": 120,
+      "visible": false,
+      "lines": 119,
+      "sha256": "1ba661f5fac8226f84177d2e0d948661b24ada2448da9d7507e13c22d2c9174c"
+    },
+    {
+      "cell": 34,
+      "file": "R/messages.R",
+      "start": 2,
+      "end": 95,
+      "visible": true,
+      "lines": 94,
+      "sha256": "49405a0f8dca636ee0019f779b59bc326bb44cc418174530fd915e683013a483"
+    },
+    {
+      "cell": 35,
+      "file": "R/messages.R",
+      "start": 98,
+      "end": 260,
+      "visible": true,
+      "lines": 163,
+      "sha256": "49405a0f8dca636ee0019f779b59bc326bb44cc418174530fd915e683013a483"
+    },
+    {
+      "cell": 36,
+      "file": "R/messages.R",
+      "start": 263,
+      "end": 418,
+      "visible": true,
+      "lines": 156,
+      "sha256": "49405a0f8dca636ee0019f779b59bc326bb44cc418174530fd915e683013a483"
+    },
+    {
+      "cell": 37,
+      "file": "R/messages.R",
+      "start": 421,
+      "end": 468,
+      "visible": true,
+      "lines": 48,
+      "sha256": "49405a0f8dca636ee0019f779b59bc326bb44cc418174530fd915e683013a483"
+    },
+    {
+      "cell": 38,
+      "file": "R/messages.R",
+      "start": 471,
+      "end": 503,
+      "visible": true,
+      "lines": 33,
+      "sha256": "49405a0f8dca636ee0019f779b59bc326bb44cc418174530fd915e683013a483"
+    },
+    {
+      "cell": 39,
+      "file": "R/checks.R",
+      "start": 123,
+      "end": 186,
+      "visible": false,
+      "lines": 64,
+      "sha256": "1ba661f5fac8226f84177d2e0d948661b24ada2448da9d7507e13c22d2c9174c"
+    },
+    {
+      "cell": 49,
+      "file": "R/covariance.R",
+      "start": 2,
+      "end": 102,
+      "visible": true,
+      "lines": 101,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "cell": 50,
+      "file": "R/covariance.R",
+      "start": 105,
+      "end": 156,
+      "visible": true,
+      "lines": 52,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "cell": 51,
+      "file": "R/covariance.R",
+      "start": 159,
+      "end": 216,
+      "visible": true,
+      "lines": 58,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "cell": 53,
+      "file": "R/results.R",
+      "start": 2,
+      "end": 41,
+      "visible": false,
+      "lines": 40,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 54,
+      "file": "R/results.R",
+      "start": 44,
+      "end": 78,
+      "visible": false,
+      "lines": 35,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 55,
+      "file": "R/plots.R",
+      "start": 464,
+      "end": 584,
+      "visible": false,
+      "lines": 121,
+      "sha256": "784550c7cc4f36194b59110a7188feadc8c104eddba76a7d219c5ef92585fb79"
+    },
+    {
+      "cell": 59,
+      "file": "R/covariance.R",
+      "start": 423,
+      "end": 478,
+      "visible": true,
+      "lines": 56,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "cell": 60,
+      "file": "R/covariance.R",
+      "start": 481,
+      "end": 581,
+      "visible": true,
+      "lines": 101,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "cell": 67,
+      "file": "R/plots.R",
+      "start": 280,
+      "end": 461,
+      "visible": false,
+      "lines": 182,
+      "sha256": "784550c7cc4f36194b59110a7188feadc8c104eddba76a7d219c5ef92585fb79"
+    },
+    {
+      "cell": 70,
+      "file": "R/models.R",
+      "start": 2,
+      "end": 146,
+      "visible": true,
+      "lines": 145,
+      "sha256": "1fa316bc0ea0d11502cf85c1b124a7d2d9b79cba95fb6c16751b85e8aa242195"
+    },
+    {
+      "cell": 74,
+      "file": "R/inference.R",
+      "start": 2,
+      "end": 71,
+      "visible": true,
+      "lines": 70,
+      "sha256": "29a9b8fa0e87bbcd1ccf3a8d43b130110a52df95b92cd64fa614bc414fbc6b85"
+    },
+    {
+      "cell": 75,
+      "file": "R/inference.R",
+      "start": 74,
+      "end": 128,
+      "visible": true,
+      "lines": 55,
+      "sha256": "29a9b8fa0e87bbcd1ccf3a8d43b130110a52df95b92cd64fa614bc414fbc6b85"
+    },
+    {
+      "cell": 76,
+      "file": "R/inference.R",
+      "start": 131,
+      "end": 271,
+      "visible": true,
+      "lines": 141,
+      "sha256": "29a9b8fa0e87bbcd1ccf3a8d43b130110a52df95b92cd64fa614bc414fbc6b85"
+    },
+    {
+      "cell": 77,
+      "file": "R/inference.R",
+      "start": 274,
+      "end": 294,
+      "visible": true,
+      "lines": 21,
+      "sha256": "29a9b8fa0e87bbcd1ccf3a8d43b130110a52df95b92cd64fa614bc414fbc6b85"
+    },
+    {
+      "cell": 78,
+      "file": "R/inference.R",
+      "start": 297,
+      "end": 400,
+      "visible": true,
+      "lines": 104,
+      "sha256": "29a9b8fa0e87bbcd1ccf3a8d43b130110a52df95b92cd64fa614bc414fbc6b85"
+    },
+    {
+      "cell": 81,
+      "file": "R/uncertainty.R",
+      "start": 2,
+      "end": 49,
+      "visible": true,
+      "lines": 48,
+      "sha256": "665dcbf7eb340287e50cc2bd02815bb33878afa3f92911e9edf0711dcf517563"
+    },
+    {
+      "cell": 83,
+      "file": "R/experiments.R",
+      "start": 2,
+      "end": 206,
+      "visible": false,
+      "lines": 205,
+      "sha256": "f3a3be8b0b03bcdb54f5e1d86f243cbbe9b88520a03c5560998ef01278a30137"
+    },
+    {
+      "cell": 97,
+      "file": "R/results.R",
+      "start": 274,
+      "end": 336,
+      "visible": false,
+      "lines": 63,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 98,
+      "file": "R/results.R",
+      "start": 250,
+      "end": 271,
+      "visible": false,
+      "lines": 22,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 100,
+      "file": "R/models.R",
+      "start": 149,
+      "end": 266,
+      "visible": true,
+      "lines": 118,
+      "sha256": "1fa316bc0ea0d11502cf85c1b124a7d2d9b79cba95fb6c16751b85e8aa242195"
+    },
+    {
+      "cell": 104,
+      "file": "R/experiments.R",
+      "start": 209,
+      "end": 288,
+      "visible": false,
+      "lines": 80,
+      "sha256": "f3a3be8b0b03bcdb54f5e1d86f243cbbe9b88520a03c5560998ef01278a30137"
+    },
+    {
+      "cell": 105,
+      "file": "R/experiments.R",
+      "start": 291,
+      "end": 916,
+      "visible": false,
+      "lines": 626,
+      "sha256": "f3a3be8b0b03bcdb54f5e1d86f243cbbe9b88520a03c5560998ef01278a30137"
+    },
+    {
+      "cell": 106,
+      "file": "R/experiments.R",
+      "start": 919,
+      "end": 988,
+      "visible": false,
+      "lines": 70,
+      "sha256": "f3a3be8b0b03bcdb54f5e1d86f243cbbe9b88520a03c5560998ef01278a30137"
+    },
+    {
+      "cell": 107,
+      "file": "R/experiments.R",
+      "start": 991,
+      "end": 1154,
+      "visible": false,
+      "lines": 164,
+      "sha256": "f3a3be8b0b03bcdb54f5e1d86f243cbbe9b88520a03c5560998ef01278a30137"
+    },
+    {
+      "cell": 108,
+      "file": "R/results.R",
+      "start": 81,
+      "end": 120,
+      "visible": false,
+      "lines": 40,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 109,
+      "file": "R/plots.R",
+      "start": 179,
+      "end": 205,
+      "visible": false,
+      "lines": 27,
+      "sha256": "784550c7cc4f36194b59110a7188feadc8c104eddba76a7d219c5ef92585fb79"
+    },
+    {
+      "cell": 120,
+      "file": "R/models.R",
+      "start": 269,
+      "end": 303,
+      "visible": true,
+      "lines": 35,
+      "sha256": "1fa316bc0ea0d11502cf85c1b124a7d2d9b79cba95fb6c16751b85e8aa242195"
+    },
+    {
+      "cell": 121,
+      "file": "R/covariance.R",
+      "start": 219,
+      "end": 372,
+      "visible": true,
+      "lines": 154,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "cell": 122,
+      "file": "R/covariance.R",
+      "start": 375,
+      "end": 420,
+      "visible": true,
+      "lines": 46,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "cell": 123,
+      "file": "R/models.R",
+      "start": 306,
+      "end": 320,
+      "visible": false,
+      "lines": 15,
+      "sha256": "1fa316bc0ea0d11502cf85c1b124a7d2d9b79cba95fb6c16751b85e8aa242195"
+    },
+    {
+      "cell": 124,
+      "file": "R/models.R",
+      "start": 323,
+      "end": 385,
+      "visible": true,
+      "lines": 63,
+      "sha256": "1fa316bc0ea0d11502cf85c1b124a7d2d9b79cba95fb6c16751b85e8aa242195"
+    },
+    {
+      "cell": 129,
+      "file": "R/results.R",
+      "start": 123,
+      "end": 157,
+      "visible": false,
+      "lines": 35,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 130,
+      "file": "R/results.R",
+      "start": 160,
+      "end": 197,
+      "visible": false,
+      "lines": 38,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 131,
+      "file": "R/results.R",
+      "start": 200,
+      "end": 247,
+      "visible": false,
+      "lines": 48,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 133,
+      "file": "python/gpt2/adamw.json",
+      "start": 1,
+      "end": 16,
+      "visible": false,
+      "lines": 16,
+      "sha256": "b5ed4bb3c9a19e953fe4d16642594bdbf85a664069ad231873501d473585ca9d"
+    },
+    {
+      "cell": 134,
+      "file": "python/gpt2/adjoint_variance.py",
+      "start": 1,
+      "end": 46,
+      "visible": false,
+      "lines": 46,
+      "sha256": "f0b75fc91ac722829d74eaa69174e0a6175a237959a7a73fcec01c2394e831e4"
+    },
+    {
+      "cell": 135,
+      "file": "python/gpt2/data.py",
+      "start": 1,
+      "end": 41,
+      "visible": false,
+      "lines": 41,
+      "sha256": "bbf3cd4c29d25666bd025e5074056bc592a3bada53dec2a3e7383a131eecfd13"
+    },
+    {
+      "cell": 136,
+      "file": "python/gpt2/model.py",
+      "start": 1,
+      "end": 66,
+      "visible": false,
+      "lines": 66,
+      "sha256": "f24ea3f878d84da6b2b65f8501df2a3e30929a18f96972034ba40e7502a7d53a"
+    },
+    {
+      "cell": 137,
+      "file": "python/gpt2/moment_ep.json",
+      "start": 1,
+      "end": 19,
+      "visible": false,
+      "lines": 19,
+      "sha256": "3a2df1a7540eeadf476238040d7373d61248f5da58bcbc621f89c0e4dc64288b"
+    },
+    {
+      "cell": 138,
+      "file": "python/gpt2/moment_training.py",
+      "start": 1,
+      "end": 57,
+      "visible": false,
+      "lines": 57,
+      "sha256": "9f524e75a276c7f8130b1d143ad703ecd06d406acc099a08b055b77b0949a50a"
+    },
+    {
+      "cell": 139,
+      "file": "python/gpt2/moments.py",
+      "start": 1,
+      "end": 119,
+      "visible": false,
+      "lines": 119,
+      "sha256": "cc6a5f092f7323b4232e6dadda0f2caa404fc765e3697600c50db9be7f0d9dc2"
+    },
+    {
+      "cell": 140,
+      "file": "python/gpt2/optimizers.py",
+      "start": 1,
+      "end": 81,
+      "visible": false,
+      "lines": 81,
+      "sha256": "6fd3a2dd4759fa6c4ecc59bf3bc1c3379a364c0cbfa7db1ca0af94770ba5f052"
+    },
+    {
+      "cell": 141,
+      "file": "python/gpt2/run_selected.py",
+      "start": 1,
+      "end": 24,
+      "visible": false,
+      "lines": 24,
+      "sha256": "398346112d80d57c32542fe563074f3f32dd334d83fde6acc88c62b62b194ffa"
+    },
+    {
+      "cell": 142,
+      "file": "python/gpt2/sampled_mfvi.json",
+      "start": 1,
+      "end": 17,
+      "visible": false,
+      "lines": 17,
+      "sha256": "f4eb99934a175edfcc64f9f8a0c6c3c11507bf5ee4cf015a5ee1b472567f80a1"
+    },
+    {
+      "cell": 143,
+      "file": "python/gpt2/train_sampled.py",
+      "start": 1,
+      "end": 118,
+      "visible": false,
+      "lines": 118,
+      "sha256": "d4cdbe7f0cced31aaa75089c03efabc79c188011cf2bac349de821a95bd29004"
+    },
+    {
+      "cell": 144,
+      "file": "python/gpt2/vadam_normalization.py",
+      "start": 1,
+      "end": 37,
+      "visible": false,
+      "lines": 37,
+      "sha256": "5f987de6d0c86e8101db37a555cfd8fd9375d4faa62eca3ab071b26be98607e1"
+    },
+    {
+      "cell": 145,
+      "file": "python/blob_mirror/compact_moments.py",
+      "start": 1,
+      "end": 259,
+      "visible": false,
+      "lines": 259,
+      "sha256": "461b7f5d9529a8eb0d0cf6345f46322e9839bb547c79417fada18dab186c8867"
+    },
+    {
+      "cell": 146,
+      "file": "python/blob_mirror/fused_carrier.py",
+      "start": 1,
+      "end": 17,
+      "visible": false,
+      "lines": 17,
+      "sha256": "edc0c7e82a7f4c40888264a313e19e248f26ae50822ec6c4b42fe873fc23233c"
+    },
+    {
+      "cell": 147,
+      "file": "python/blob_mirror/gaussian_logistic.py",
+      "start": 1,
+      "end": 52,
+      "visible": false,
+      "lines": 52,
+      "sha256": "88a6ac3d78f9439e892492f3181285d2f1b3eb0c4264a98f731170143aa60b41"
+    },
+    {
+      "cell": 148,
+      "file": "python/blob_mirror/nonlinear_moments.py",
+      "start": 1,
+      "end": 249,
+      "visible": false,
+      "lines": 249,
+      "sha256": "77fc9db13a92f83a412f18ee6d5129c18a2a432c1a04790d8b2359eda14efe68"
+    },
+    {
+      "cell": 149,
+      "file": "python/blob_mirror/predict.py",
+      "start": 1,
+      "end": 48,
+      "visible": false,
+      "lines": 48,
+      "sha256": "6e1dc80b58e0bed2b4717c3badc0b40ed2662af85e0ceebafb9fcd6684fe4ae3"
+    },
+    {
+      "cell": 150,
+      "file": "python/blob_mirror/replicate.py",
+      "start": 1,
+      "end": 58,
+      "visible": false,
+      "lines": 58,
+      "sha256": "c41855ee7d861c6726688333093d3761672c5413c16982d8fc9b442cf035dd34"
+    },
+    {
+      "cell": 151,
+      "file": "python/blob_mirror/source_stream_moments.py",
+      "start": 1,
+      "end": 98,
+      "visible": false,
+      "lines": 98,
+      "sha256": "bc299f2a396e10db95a8e97bb4ec709b6aee982e25939034afb32743fd834be9"
+    },
+    {
+      "cell": 152,
+      "file": "python/blob_mirror/source_stream_transfer.py",
+      "start": 1,
+      "end": 102,
+      "visible": false,
+      "lines": 102,
+      "sha256": "6cf044f1dbde58d87fc4489b9d3046b9cf969f13dc546d2e615c0534faa1f5a2"
+    },
+    {
+      "cell": 153,
+      "file": "python/blob_mirror/train_fixed_transfer.py",
+      "start": 1,
+      "end": 140,
+      "visible": false,
+      "lines": 140,
+      "sha256": "e7317f8ff9cc72aef84f9bcd28c8b3c0beb0730cf33d3b0e7392916a9978676c"
+    },
+    {
+      "cell": 154,
+      "file": "python/blob_mirror/transfer_data.py",
+      "start": 1,
+      "end": 69,
+      "visible": false,
+      "lines": 69,
+      "sha256": "e6059ce937ec3dedf053ccb9c048af8036d79c7f8ae30f4a4aa8cb8465725ecb"
+    },
+    {
+      "cell": 155,
+      "file": "python/blob_mirror/transfer_model.py",
+      "start": 1,
+      "end": 101,
+      "visible": false,
+      "lines": 101,
+      "sha256": "1f35adf50d5e10d546bd03b72b50a71aab79ae7bc33cad9fb55479b4bbecf48a"
+    },
+    {
+      "cell": 156,
+      "file": "python/blob_mirror/transfer_moments.py",
+      "start": 1,
+      "end": 60,
+      "visible": false,
+      "lines": 60,
+      "sha256": "d59203caa447a16bcff4e6ac4b9137547b4b7d4a4d7e5de0ef9ff6448a9447bd"
+    },
+    {
+      "cell": 157,
+      "file": "R/results.R",
+      "start": 339,
+      "end": 363,
+      "visible": false,
+      "lines": 25,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "cell": 164,
+      "file": "R/models.R",
+      "start": 388,
+      "end": 517,
+      "visible": true,
+      "lines": 130,
+      "sha256": "1fa316bc0ea0d11502cf85c1b124a7d2d9b79cba95fb6c16751b85e8aa242195"
+    }
+  ]
+}

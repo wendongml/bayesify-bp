@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-12",
+  "status": "PASS",
+  "execution": "Empty-directory standalone notebook in Consumer Colab L4; sources reconstructed from notebook payload",
+  "notebook_sha256": "3d40c45743c59df0a53a1712afb31e01ae024ae33cefcac9d3ded27ac7060f8c",
+  "cells": 114,
+  "code_cells": 36,
+  "executed_cells": 36,
+  "error_outputs": 0,
+  "kernel": "python3",
+  "tests_run": 71,
+  "tests_passed": 70,
+  "tests_skipped": 1,
+  "local_tests_passed": 71,
+  "native_dirty_training": {
+    "runs": 5,
+    "epochs_each": 30,
+    "seed": 41,
+    "training_observations": 110000,
+    "validation_observations": 10000
+  },
+  "matched_resnet_comparisons": 80,
+  "matched_gaussian_text_comparisons": 8,
+  "training_scope": "Full native Dirty-MNIST fits; existing Gaussian GPT-2 beliefs replayed without new text training. Historical benchmark fits retain original source attribution.",
+  "source_inventory": "../site/source_lines.csv",
+  "mathematical_correspondence": "MATH_COVERAGE.md",
+  "skip_reason": "Standalone upload omits the release-sidecar ONNX catalog; the reader independently exports and checks its architectures.",
+  "python": "3.13.16",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "numpy": "2.4.6",
+    "transformers": "4.48.3",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1"
+  },
+  "rendering": {
+    "pdf_pages": 72,
+    "body_pt": 10,
+    "code_pt": 9.2,
+    "html": [
+      {
+        "page": "/pytorch/README.html",
+        "width": 1280,
+        "documentWidth": 1280,
+        "formulas": 514,
+        "mathErrors": 0,
+        "brokenImages": 0,
+        "chapters": 8,
+        "frameworks": 3
+      },
+      {
+        "page": "/pytorch/README.html",
+        "width": 430,
+        "documentWidth": 430,
+        "formulas": 514,
+        "mathErrors": 0,
+        "brokenImages": 0,
+        "chapters": 8,
+        "frameworks": 3
+      }
+    ],
+    "pdf_sha256": "74d8945165c0423f29c27405738e9806b434fc9ebb381c55804ce6eca6f1ad91",
+    "html_sha256": "ff1f95432f6f070c69e533e9db833166772fae37d63c4fde88aa9750703de5f2",
+    "representative_pages_visually_reviewed": true,
+    "latex_missing_glyphs": 0,
+    "latex_overfull_boxes": 0
+  }
+}

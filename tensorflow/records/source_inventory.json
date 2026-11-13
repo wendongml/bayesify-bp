@@ -1,0 +1,258 @@
+{
+  "counting_rule": "Physical implementation lines including comments and blanks; original Python counted separately. Native R code cells now include source extraction/support cells. Current per-section counts: SECTIONS.md.",
+  "current": {
+    "r_files": 13,
+    "r_lines": 4810,
+    "python_files": 23,
+    "python_lines": 2016,
+    "notebook_cells": 169,
+    "code_cells": 103,
+    "r_code_cells": 103,
+    "visible_code_lines": 2472,
+    "source_definitions": 78,
+    "visible_source_lines": 2322,
+    "figures": 19
+  },
+  "r": [
+    {
+      "file": "R/checks.R",
+      "lines": 187,
+      "sha256": "1ba661f5fac8226f84177d2e0d948661b24ada2448da9d7507e13c22d2c9174c"
+    },
+    {
+      "file": "R/covariance.R",
+      "lines": 582,
+      "sha256": "ed6be49a04b00ac020dcd27467a60926f8d52256a1d64a355b2153bb36cce064"
+    },
+    {
+      "file": "R/experiments.R",
+      "lines": 1155,
+      "sha256": "f3a3be8b0b03bcdb54f5e1d86f243cbbe9b88520a03c5560998ef01278a30137"
+    },
+    {
+      "file": "R/gaussian.R",
+      "lines": 156,
+      "sha256": "89442539d8302f08c3a21ea8a0ca948a79c497c6895e43e5f5922dd90d95960d"
+    },
+    {
+      "file": "R/inference.R",
+      "lines": 417,
+      "sha256": "f783c54a8710692eeb1ccd04ebdf7162e5cfde19a2731a07a5d31ea73671c331"
+    },
+    {
+      "file": "R/layers.R",
+      "lines": 184,
+      "sha256": "779f40dc99682705a8c5b1dd53e044f28a779f7e965e01a67bd5935cac48178b"
+    },
+    {
+      "file": "R/messages.R",
+      "lines": 504,
+      "sha256": "49405a0f8dca636ee0019f779b59bc326bb44cc418174530fd915e683013a483"
+    },
+    {
+      "file": "R/models.R",
+      "lines": 518,
+      "sha256": "1fa316bc0ea0d11502cf85c1b124a7d2d9b79cba95fb6c16751b85e8aa242195"
+    },
+    {
+      "file": "R/plots.R",
+      "lines": 638,
+      "sha256": "4beb920748124db970bddc1cb526eee002c93b1b17a24273e795a75dffa6e053"
+    },
+    {
+      "file": "R/results.R",
+      "lines": 364,
+      "sha256": "41bb0db6e332e7e07a984502ea88a411ac53d215baf71d399febfb10407be212"
+    },
+    {
+      "file": "R/setup.R",
+      "lines": 34,
+      "sha256": "7e63b21d5d00f50d941528c8f06ce7d84d31d0c6c7ba5fe668c366309868b431"
+    },
+    {
+      "file": "R/uncertainty.R",
+      "lines": 50,
+      "sha256": "665dcbf7eb340287e50cc2bd02815bb33878afa3f92911e9edf0711dcf517563"
+    },
+    {
+      "file": "reproduce_results.R",
+      "lines": 21,
+      "sha256": "279ab992d37aac466a46cbb4f816d090d41bd20949fda79622c890d4f08c2056"
+    }
+  ],
+  "python": [
+    {
+      "file": "python/blob_mirror/compact_moments.py",
+      "lines": 259,
+      "sha256": "461b7f5d9529a8eb0d0cf6345f46322e9839bb547c79417fada18dab186c8867"
+    },
+    {
+      "file": "python/blob_mirror/fused_carrier.py",
+      "lines": 17,
+      "sha256": "edc0c7e82a7f4c40888264a313e19e248f26ae50822ec6c4b42fe873fc23233c"
+    },
+    {
+      "file": "python/blob_mirror/gaussian_logistic.py",
+      "lines": 52,
+      "sha256": "88a6ac3d78f9439e892492f3181285d2f1b3eb0c4264a98f731170143aa60b41"
+    },
+    {
+      "file": "python/blob_mirror/nonlinear_moments.py",
+      "lines": 249,
+      "sha256": "77fc9db13a92f83a412f18ee6d5129c18a2a432c1a04790d8b2359eda14efe68"
+    },
+    {
+      "file": "python/blob_mirror/predict.py",
+      "lines": 48,
+      "sha256": "6e1dc80b58e0bed2b4717c3badc0b40ed2662af85e0ceebafb9fcd6684fe4ae3"
+    },
+    {
+      "file": "python/blob_mirror/replicate.py",
+      "lines": 58,
+      "sha256": "c41855ee7d861c6726688333093d3761672c5413c16982d8fc9b442cf035dd34"
+    },
+    {
+      "file": "python/blob_mirror/source_stream_moments.py",
+      "lines": 98,
+      "sha256": "bc299f2a396e10db95a8e97bb4ec709b6aee982e25939034afb32743fd834be9"
+    },
+    {
+      "file": "python/blob_mirror/source_stream_transfer.py",
+      "lines": 102,
+      "sha256": "6cf044f1dbde58d87fc4489b9d3046b9cf969f13dc546d2e615c0534faa1f5a2"
+    },
+    {
+      "file": "python/blob_mirror/train_fixed_transfer.py",
+      "lines": 140,
+      "sha256": "e7317f8ff9cc72aef84f9bcd28c8b3c0beb0730cf33d3b0e7392916a9978676c"
+    },
+    {
+      "file": "python/blob_mirror/transfer_data.py",
+      "lines": 69,
+      "sha256": "e6059ce937ec3dedf053ccb9c048af8036d79c7f8ae30f4a4aa8cb8465725ecb"
+    },
+    {
+      "file": "python/blob_mirror/transfer_model.py",
+      "lines": 101,
+      "sha256": "1f35adf50d5e10d546bd03b72b50a71aab79ae7bc33cad9fb55479b4bbecf48a"
+    },
+    {
+      "file": "python/blob_mirror/transfer_moments.py",
+      "lines": 60,
+      "sha256": "d59203caa447a16bcff4e6ac4b9137547b4b7d4a4d7e5de0ef9ff6448a9447bd"
+    },
+    {
+      "file": "python/gpt2/adjoint_variance.py",
+      "lines": 46,
+      "sha256": "f0b75fc91ac722829d74eaa69174e0a6175a237959a7a73fcec01c2394e831e4"
+    },
+    {
+      "file": "python/gpt2/data.py",
+      "lines": 41,
+      "sha256": "bbf3cd4c29d25666bd025e5074056bc592a3bada53dec2a3e7383a131eecfd13"
+    },
+    {
+      "file": "python/gpt2/model.py",
+      "lines": 66,
+      "sha256": "f24ea3f878d84da6b2b65f8501df2a3e30929a18f96972034ba40e7502a7d53a"
+    },
+    {
+      "file": "python/gpt2/moment_training.py",
+      "lines": 57,
+      "sha256": "9f524e75a276c7f8130b1d143ad703ecd06d406acc099a08b055b77b0949a50a"
+    },
+    {
+      "file": "python/gpt2/moments.py",
+      "lines": 119,
+      "sha256": "cc6a5f092f7323b4232e6dadda0f2caa404fc765e3697600c50db9be7f0d9dc2"
+    },
+    {
+      "file": "python/gpt2/optimizers.py",
+      "lines": 81,
+      "sha256": "6fd3a2dd4759fa6c4ecc59bf3bc1c3379a364c0cbfa7db1ca0af94770ba5f052"
+    },
+    {
+      "file": "python/gpt2/run_selected.py",
+      "lines": 24,
+      "sha256": "398346112d80d57c32542fe563074f3f32dd334d83fde6acc88c62b62b194ffa"
+    },
+    {
+      "file": "python/gpt2/train_sampled.py",
+      "lines": 118,
+      "sha256": "d4cdbe7f0cced31aaa75089c03efabc79c188011cf2bac349de821a95bd29004"
+    },
+    {
+      "file": "python/gpt2/vadam_normalization.py",
+      "lines": 37,
+      "sha256": "5f987de6d0c86e8101db37a555cfd8fd9375d4faa62eca3ab071b26be98607e1"
+    },
+    {
+      "file": "python/keras_graph.py",
+      "lines": 126,
+      "sha256": "4659a11eeeea6fb0350dafd25923c899d6ba269aa9baad7439588694e35e6304"
+    },
+    {
+      "file": "python/run_original.py",
+      "lines": 48,
+      "sha256": "0a08228d5e236bc856486a63e2d40f35b8097234a3d2ccb2e91373710877b484"
+    }
+  ],
+  "sections": [
+    {
+      "section": "1. Overview and Gaussian computations",
+      "first_cell": 1,
+      "last_cell": 22,
+      "code_lines": 728,
+      "visible_code_lines": 233
+    },
+    {
+      "section": "2. Gaussian, EP and MFVI: message passing equals backpropagation",
+      "first_cell": 23,
+      "last_cell": 45,
+      "code_lines": 796,
+      "visible_code_lines": 613
+    },
+    {
+      "section": "3. Approximation quality versus Monte Carlo and computation",
+      "first_cell": 46,
+      "last_cell": 61,
+      "code_lines": 448,
+      "visible_code_lines": 379
+    },
+    {
+      "section": "4. MNIST: MLP and LeNet, with common uncertainty diagnostics",
+      "first_cell": 62,
+      "last_cell": 89,
+      "code_lines": 1013,
+      "visible_code_lines": 626
+    },
+    {
+      "section": "5. CIFAR-10: shared features in ResNet and DenseNet",
+      "first_cell": 90,
+      "last_cell": 114,
+      "code_lines": 1274,
+      "visible_code_lines": 181
+    },
+    {
+      "section": "6. GPT-2 with LoRA: SST-2",
+      "first_cell": 115,
+      "last_cell": 159,
+      "code_lines": 2446,
+      "visible_code_lines": 304
+    },
+    {
+      "section": "7. RoBERTa with LoRA: CLINC150",
+      "first_cell": 160,
+      "last_cell": 166,
+      "code_lines": 136,
+      "visible_code_lines": 136
+    },
+    {
+      "section": "8. Results and reproduction",
+      "first_cell": 167,
+      "last_cell": 168,
+      "code_lines": 0,
+      "visible_code_lines": 0
+    }
+  ]
+}

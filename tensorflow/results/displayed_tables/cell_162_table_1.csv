@@ -1,0 +1,3 @@
+Method,Brier (down),AURC (down),Error AUROC (up),Error AUPRC (up),Risk at 80% (down)
+Ordinary AdamW,0.057015,0.0030869,0.94715,0.55503,0.0041667
+Moment MFVI,0.054868,0.0029763,0.94205,0.45206,0.0033333

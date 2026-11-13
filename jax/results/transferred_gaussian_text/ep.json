@@ -1,0 +1,21 @@
+{
+  "method": "ep",
+  "scope": "native JAX evaluation/likelihood derivative of transferred existing belief; no new training",
+  "examples": 872,
+  "batch": 8,
+  "compile_seconds": 0.05207091800002672,
+  "inference_seconds": 5.856297505999464,
+  "n": 872.0,
+  "accuracy": 0.9231651376146789,
+  "nll": 0.2232546269359013,
+  "brier": 0.1258141047724151,
+  "ece": 0.029407352524972362,
+  "aurc": 0.01918196543443083,
+  "excess_aurc": 0.016107482395771137,
+  "error_auroc": 0.8371187540558078,
+  "error_auprc": 0.2628231042805048,
+  "risk80": 0.034383954154727794,
+  "risk90": 0.0535031847133758,
+  "risk95": 0.061519903498190594,
+  "entropy": 0.15716866907760807
+}

@@ -1,0 +1,102 @@
+{
+  "samples": 32768,
+  "rows": [
+    {
+      "method": "mfvi",
+      "scheme": "direct sampling",
+      "draws": 128,
+      "seconds": 0.0001932199957082048,
+      "mean_relative_error": 0.0699790988483375,
+      "centered_relative_error": 0.9654996250894051
+    },
+    {
+      "method": "mfvi",
+      "scheme": "direct sampling",
+      "draws": 512,
+      "seconds": 0.00019145599799230695,
+      "mean_relative_error": 0.029979188169524062,
+      "centered_relative_error": 0.40328987425738677
+    },
+    {
+      "method": "mfvi",
+      "scheme": "direct sampling",
+      "draws": 2048,
+      "seconds": 0.000345639004081022,
+      "mean_relative_error": 0.015573119467126454,
+      "centered_relative_error": 0.19953568228780988
+    },
+    {
+      "method": "ep",
+      "scheme": "direct sampling",
+      "draws": 128,
+      "seconds": 0.00019432899716775864,
+      "mean_relative_error": 0.06866713798501867,
+      "centered_relative_error": 1.0900392756139783
+    },
+    {
+      "method": "ep",
+      "scheme": "direct sampling",
+      "draws": 512,
+      "seconds": 0.00022505100059788674,
+      "mean_relative_error": 0.029514052301099273,
+      "centered_relative_error": 0.4377175682314701
+    },
+    {
+      "method": "ep",
+      "scheme": "direct sampling",
+      "draws": 2048,
+      "seconds": 0.00034880499879363924,
+      "mean_relative_error": 0.015849060653189053,
+      "centered_relative_error": 0.21526923072379034
+    },
+    {
+      "method": "mfvi",
+      "scheme": "Gaussian + nonlinear residual",
+      "draws": 128,
+      "seconds_including_setup": 7.298296012995706,
+      "mean_relative_error": 0.05937014330803848,
+      "centered_relative_error": 0.8344316852433445
+    },
+    {
+      "method": "ep",
+      "scheme": "Gaussian + nonlinear residual",
+      "draws": 128,
+      "seconds_including_setup": 7.298296012995706,
+      "mean_relative_error": 0.06258099871796645,
+      "centered_relative_error": 0.8952192710630817
+    },
+    {
+      "method": "mfvi",
+      "scheme": "Gaussian + nonlinear residual",
+      "draws": 512,
+      "seconds_including_setup": 2.643248002998007,
+      "mean_relative_error": 0.029251582703814373,
+      "centered_relative_error": 0.42143328252375334
+    },
+    {
+      "method": "ep",
+      "scheme": "Gaussian + nonlinear residual",
+      "draws": 512,
+      "seconds_including_setup": 2.643248002998007,
+      "mean_relative_error": 0.028799234468336852,
+      "centered_relative_error": 0.4544277984443312
+    },
+    {
+      "method": "mfvi",
+      "scheme": "Gaussian + nonlinear residual",
+      "draws": 2048,
+      "seconds_including_setup": 2.7317620960020577,
+      "mean_relative_error": 0.015243538281698788,
+      "centered_relative_error": 0.18069041449661952
+    },
+    {
+      "method": "ep",
+      "scheme": "Gaussian + nonlinear residual",
+      "draws": 2048,
+      "seconds_including_setup": 2.7317620960020577,
+      "mean_relative_error": 0.016032285181973926,
+      "centered_relative_error": 0.19774626087139957
+    }
+  ],
+  "timing_note": "Residual timings include Jacobian/quadrature setup and compilation; direct-sampling execution timing excludes compilation. Not a speedup claim."
+}

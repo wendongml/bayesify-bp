@@ -1,0 +1,81 @@
+==============================================================================================================
+Layer (type (var_name))                                      Output Shape              Param #
+==============================================================================================================
+MomentCifarNet (MomentCifarNet)                              [1, 10]                   --
+├─MomentDAG (network)                                        [1, 10]                   --
+│    └─ModuleDict (layers)                                   --                        --
+│    │    └─MomentConv2d (stem_conv)                         [1, 16, 32, 32]           864
+│    │    └─MomentBatchNorm2d (stem_bn)                      [1, 16, 32, 32]           64
+│    │    └─MomentReLU (stem_relu)                           [1, 16, 32, 32]           --
+│    │    └─MomentConv2d (stage1_block1_conv1)               [1, 16, 32, 32]           4,608
+│    │    └─MomentBatchNorm2d (stage1_block1_bn1)            [1, 16, 32, 32]           64
+│    │    └─MomentReLU (stage1_block1_relu1)                 [1, 16, 32, 32]           --
+│    │    └─MomentConv2d (stage1_block1_conv2)               [1, 16, 32, 32]           4,608
+│    │    └─MomentBatchNorm2d (stage1_block1_bn2)            [1, 16, 32, 32]           64
+│    │    └─MomentAdd (stage1_block1_sum)                    [1, 16, 32, 32]           --
+│    │    └─MomentReLU (stage1_block1_relu2)                 [1, 16, 32, 32]           --
+│    │    └─MomentConv2d (stage1_block2_conv1)               [1, 16, 32, 32]           4,608
+│    │    └─MomentBatchNorm2d (stage1_block2_bn1)            [1, 16, 32, 32]           64
+│    │    └─MomentReLU (stage1_block2_relu1)                 [1, 16, 32, 32]           --
+│    │    └─MomentConv2d (stage1_block2_conv2)               [1, 16, 32, 32]           4,608
+│    │    └─MomentBatchNorm2d (stage1_block2_bn2)            [1, 16, 32, 32]           64
+│    │    └─MomentAdd (stage1_block2_sum)                    [1, 16, 32, 32]           --
+│    │    └─MomentReLU (stage1_block2_relu2)                 [1, 16, 32, 32]           --
+│    │    └─MomentConv2d (stage1_block3_conv1)               [1, 16, 32, 32]           4,608
+│    │    └─MomentBatchNorm2d (stage1_block3_bn1)            [1, 16, 32, 32]           64
+│    │    └─MomentReLU (stage1_block3_relu1)                 [1, 16, 32, 32]           --
+│    │    └─MomentConv2d (stage1_block3_conv2)               [1, 16, 32, 32]           4,608
+│    │    └─MomentBatchNorm2d (stage1_block3_bn2)            [1, 16, 32, 32]           64
+│    │    └─MomentAdd (stage1_block3_sum)                    [1, 16, 32, 32]           --
+│    │    └─MomentReLU (stage1_block3_relu2)                 [1, 16, 32, 32]           --
+│    │    └─MomentCifarShortcut (stage2_block1_shortcut)     [1, 32, 16, 16]           --
+│    │    └─MomentConv2d (stage2_block1_conv1)               [1, 32, 16, 16]           9,216
+│    │    └─MomentBatchNorm2d (stage2_block1_bn1)            [1, 32, 16, 16]           128
+│    │    └─MomentReLU (stage2_block1_relu1)                 [1, 32, 16, 16]           --
+│    │    └─MomentConv2d (stage2_block1_conv2)               [1, 32, 16, 16]           18,432
+│    │    └─MomentBatchNorm2d (stage2_block1_bn2)            [1, 32, 16, 16]           128
+│    │    └─MomentAdd (stage2_block1_sum)                    [1, 32, 16, 16]           --
+│    │    └─MomentReLU (stage2_block1_relu2)                 [1, 32, 16, 16]           --
+│    │    └─MomentConv2d (stage2_block2_conv1)               [1, 32, 16, 16]           18,432
+│    │    └─MomentBatchNorm2d (stage2_block2_bn1)            [1, 32, 16, 16]           128
+│    │    └─MomentReLU (stage2_block2_relu1)                 [1, 32, 16, 16]           --
+│    │    └─MomentConv2d (stage2_block2_conv2)               [1, 32, 16, 16]           18,432
+│    │    └─MomentBatchNorm2d (stage2_block2_bn2)            [1, 32, 16, 16]           128
+│    │    └─MomentAdd (stage2_block2_sum)                    [1, 32, 16, 16]           --
+│    │    └─MomentReLU (stage2_block2_relu2)                 [1, 32, 16, 16]           --
+│    │    └─MomentConv2d (stage2_block3_conv1)               [1, 32, 16, 16]           18,432
+│    │    └─MomentBatchNorm2d (stage2_block3_bn1)            [1, 32, 16, 16]           128
+│    │    └─MomentReLU (stage2_block3_relu1)                 [1, 32, 16, 16]           --
+│    │    └─MomentConv2d (stage2_block3_conv2)               [1, 32, 16, 16]           18,432
+│    │    └─MomentBatchNorm2d (stage2_block3_bn2)            [1, 32, 16, 16]           128
+│    │    └─MomentAdd (stage2_block3_sum)                    [1, 32, 16, 16]           --
+│    │    └─MomentReLU (stage2_block3_relu2)                 [1, 32, 16, 16]           --
+│    │    └─MomentCifarShortcut (stage3_block1_shortcut)     [1, 64, 8, 8]             --
+│    │    └─MomentConv2d (stage3_block1_conv1)               [1, 64, 8, 8]             36,864
+│    │    └─MomentBatchNorm2d (stage3_block1_bn1)            [1, 64, 8, 8]             256
+│    │    └─MomentReLU (stage3_block1_relu1)                 [1, 64, 8, 8]             --
+│    │    └─MomentConv2d (stage3_block1_conv2)               [1, 64, 8, 8]             73,728
+│    │    └─MomentBatchNorm2d (stage3_block1_bn2)            [1, 64, 8, 8]             256
+│    │    └─MomentAdd (stage3_block1_sum)                    [1, 64, 8, 8]             --
+│    │    └─MomentReLU (stage3_block1_relu2)                 [1, 64, 8, 8]             --
+│    │    └─MomentConv2d (stage3_block2_conv1)               [1, 64, 8, 8]             73,728
+│    │    └─MomentBatchNorm2d (stage3_block2_bn1)            [1, 64, 8, 8]             256
+│    │    └─MomentReLU (stage3_block2_relu1)                 [1, 64, 8, 8]             --
+│    │    └─MomentConv2d (stage3_block2_conv2)               [1, 64, 8, 8]             73,728
+│    │    └─MomentBatchNorm2d (stage3_block2_bn2)            [1, 64, 8, 8]             256
+│    │    └─MomentAdd (stage3_block2_sum)                    [1, 64, 8, 8]             --
+│    │    └─MomentReLU (stage3_block2_relu2)                 [1, 64, 8, 8]             --
+│    │    └─MomentConv2d (stage3_block3_conv1)               [1, 64, 8, 8]             73,728
+│    │    └─MomentBatchNorm2d (stage3_block3_bn1)            [1, 64, 8, 8]             256
+│    │    └─MomentReLU (stage3_block3_relu1)                 [1, 64, 8, 8]             --
+│    │    └─MomentConv2d (stage3_block3_conv2)               [1, 64, 8, 8]             73,728
+│    │    └─MomentBatchNorm2d (stage3_block3_bn2)            [1, 64, 8, 8]             256
+│    │    └─MomentAdd (stage3_block3_sum)                    [1, 64, 8, 8]             --
+│    │    └─MomentReLU (stage3_block3_relu2)                 [1, 64, 8, 8]             --
+│    │    └─MomentGlobalAvgPool2d (global_pool)              [1, 64]                   --
+│    │    └─MomentLinear (classifier)                        [1, 10]                   1,300
+==============================================================================================================
+Total params: 539,444
+Trainable params: 539,444
+Non-trainable params: 0
+==============================================================================================================

@@ -1,0 +1,16 @@
+{
+  "framework": "jax",
+  "versions": {
+    "jax": "0.4.38"
+  },
+  "devices": [
+    "cuda:0"
+  ],
+  "completed_epochs": 30,
+  "training_seconds": 50.114869986002304,
+  "compile_seconds": 24.950430970000525,
+  "status": "full_fixed_budget",
+  "observations": 110000,
+  "parameters": 61706,
+  "split_sha256": "908b5471cb9efb69f70b8d8f93c464b348a3c8693dbea741050ade114a049c00"
+}

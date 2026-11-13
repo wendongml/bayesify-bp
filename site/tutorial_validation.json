@@ -1,0 +1,300 @@
+{
+  "status": "PASS",
+  "scope": "Executed native readers, shared mathematics, source/cell identity and inventories; scientific agreement is separately checked in site/evidence",
+  "readers": {
+    "tensorflow": {
+      "cells": 168,
+      "code_cells": 102,
+      "figures": 18,
+      "kernel": "ir",
+      "notebook_sha256": "59f9226d59ae8ed29f39d507a3847362475ab17c9b25530a525e57d6a984e18a",
+      "sections": [
+        {
+          "title": "1. Overview and Gaussian computations",
+          "start": 1,
+          "end": 22,
+          "visible": 233,
+          "support": 495,
+          "excerpts": 0,
+          "figures": 0
+        },
+        {
+          "title": "2. Gaussian, EP and MFVI: message passing equals backpropagation",
+          "start": 23,
+          "end": 45,
+          "visible": 613,
+          "support": 183,
+          "excerpts": 0,
+          "figures": 3
+        },
+        {
+          "title": "3. Approximation quality versus Monte Carlo and computation",
+          "start": 46,
+          "end": 61,
+          "visible": 379,
+          "support": 69,
+          "excerpts": 0,
+          "figures": 3
+        },
+        {
+          "title": "4. MNIST: MLP and LeNet, with common uncertainty diagnostics",
+          "start": 62,
+          "end": 89,
+          "visible": 626,
+          "support": 387,
+          "excerpts": 0,
+          "figures": 7
+        },
+        {
+          "title": "5. CIFAR-10: shared features in ResNet and DenseNet",
+          "start": 90,
+          "end": 114,
+          "visible": 181,
+          "support": 1093,
+          "excerpts": 5,
+          "figures": 3
+        },
+        {
+          "title": "6. GPT-2 with LoRA: SST-2",
+          "start": 115,
+          "end": 159,
+          "visible": 304,
+          "support": 2142,
+          "excerpts": 0,
+          "figures": 1
+        },
+        {
+          "title": "7. RoBERTa with LoRA: CLINC150",
+          "start": 160,
+          "end": 166,
+          "visible": 136,
+          "support": 0,
+          "excerpts": 0,
+          "figures": 1
+        },
+        {
+          "title": "8. Results and reproduction",
+          "start": 167,
+          "end": 168,
+          "visible": 0,
+          "support": 0,
+          "excerpts": 0,
+          "figures": 0
+        }
+      ]
+    },
+    "pytorch": {
+      "cells": 114,
+      "code_cells": 36,
+      "figures": 20,
+      "kernel": "python3",
+      "notebook_sha256": "9a6f081ddaf7f637d7fd476e2f0e0bc141f16c6db5a6296fbfc03047370d8d67",
+      "sections": [
+        {
+          "title": "1. Gaussian coordinates and shared layer maps",
+          "start": 6,
+          "end": 16,
+          "visible": 284,
+          "support": 0,
+          "excerpts": 0,
+          "figures": 0
+        },
+        {
+          "title": "2. Gaussian, EP and MFVI: message passing equals backpropagation",
+          "start": 17,
+          "end": 31,
+          "visible": 56,
+          "support": 14,
+          "excerpts": 65,
+          "figures": 3
+        },
+        {
+          "title": "3. Approximation quality versus Monte Carlo and computation",
+          "start": 32,
+          "end": 48,
+          "visible": 87,
+          "support": 25,
+          "excerpts": 43,
+          "figures": 3
+        },
+        {
+          "title": "4. MNIST: MLP and LeNet with common uncertainty diagnostics",
+          "start": 49,
+          "end": 79,
+          "visible": 193,
+          "support": 898,
+          "excerpts": 222,
+          "figures": 7
+        },
+        {
+          "title": "5. CIFAR-10: ResNet-20 and DenseNet-40",
+          "start": 80,
+          "end": 87,
+          "visible": 112,
+          "support": 0,
+          "excerpts": 0,
+          "figures": 4
+        },
+        {
+          "title": "6. GPT-2 with rank-4 Q/V LoRA on SST-2",
+          "start": 88,
+          "end": 99,
+          "visible": 24,
+          "support": 8,
+          "excerpts": 63,
+          "figures": 1
+        },
+        {
+          "title": "7. Conditional moment MFVI: GPT-2 and RoBERTa LoRA",
+          "start": 100,
+          "end": 111,
+          "visible": 16,
+          "support": 5,
+          "excerpts": 88,
+          "figures": 2
+        },
+        {
+          "title": "8. Validation, reproduction and reading order",
+          "start": 112,
+          "end": 114,
+          "visible": 0,
+          "support": 11,
+          "excerpts": 0,
+          "figures": 0
+        }
+      ]
+    },
+    "jax": {
+      "cells": 93,
+      "code_cells": 15,
+      "figures": 19,
+      "kernel": "python3",
+      "notebook_sha256": "0d9be0be2cd74071050bdd7e5e269ce33f8d7ebcd3a250fce0b5fdb8f6c06e93",
+      "sections": [
+        {
+          "title": "1. Gaussian coordinates and shared layers",
+          "start": 4,
+          "end": 16,
+          "visible": 0,
+          "support": 0,
+          "excerpts": 179,
+          "figures": 0
+        },
+        {
+          "title": "2. Gaussian, EP and MFVI message equivalence",
+          "start": 17,
+          "end": 29,
+          "visible": 11,
+          "support": 0,
+          "excerpts": 42,
+          "figures": 3
+        },
+        {
+          "title": "3. Correlation, Monte Carlo fidelity, and computation",
+          "start": 30,
+          "end": 46,
+          "visible": 18,
+          "support": 0,
+          "excerpts": 129,
+          "figures": 3
+        },
+        {
+          "title": "4. MNIST: MLP and LeNet",
+          "start": 47,
+          "end": 65,
+          "visible": 22,
+          "support": 7,
+          "excerpts": 158,
+          "figures": 5
+        },
+        {
+          "title": "5. CIFAR-10: residual and dense connections",
+          "start": 66,
+          "end": 71,
+          "visible": 22,
+          "support": 0,
+          "excerpts": 23,
+          "figures": 4
+        },
+        {
+          "title": "6. GPT-2 LoRA: attention and Gaussian message boundaries",
+          "start": 72,
+          "end": 83,
+          "visible": 14,
+          "support": 5,
+          "excerpts": 76,
+          "figures": 0
+        },
+        {
+          "title": "7. Conditional moment MFVI: GPT-2 and RoBERTa LoRA",
+          "start": 84,
+          "end": 90,
+          "visible": 23,
+          "support": 0,
+          "excerpts": 47,
+          "figures": 4
+        },
+        {
+          "title": "8. Reproduction and code reading",
+          "start": 91,
+          "end": 93,
+          "visible": 0,
+          "support": 11,
+          "excerpts": 0,
+          "figures": 0
+        }
+      ]
+    }
+  },
+  "source_totals": {
+    "tensorflow": {
+      "files": 12,
+      "physical": 4789,
+      "nonblank": 4652,
+      "noncomment": 4005,
+      "core": 2361
+    },
+    "pytorch": {
+      "files": 21,
+      "physical": 4429,
+      "nonblank": 3758,
+      "noncomment": 3678,
+      "core": 2617
+    },
+    "jax": {
+      "files": 22,
+      "physical": 2917,
+      "nonblank": 2503,
+      "noncomment": 2419,
+      "core": 1979
+    },
+    "original_python": {
+      "files": 23,
+      "physical": 2016,
+      "nonblank": 1826,
+      "noncomment": 1742,
+      "core": 0
+    },
+    "pytorch_tests": {
+      "files": 19,
+      "physical": 1230,
+      "nonblank": 1052,
+      "noncomment": 1023,
+      "core": 0
+    },
+    "jax_tests": {
+      "files": 12,
+      "physical": 597,
+      "nonblank": 574,
+      "noncomment": 554,
+      "core": 0
+    },
+    "r_replay": {
+      "files": 1,
+      "physical": 21,
+      "nonblank": 21,
+      "noncomment": 16,
+      "core": 0
+    }
+  }
+}

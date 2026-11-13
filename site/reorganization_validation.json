@@ -1,0 +1,52 @@
+{
+  "source_and_output_checks": [
+    {
+      "implementation": "tensorflow",
+      "unchanged_scientific_source_files": 12
+    },
+    {
+      "implementation": "pytorch",
+      "unchanged_scientific_source_files": 19
+    },
+    {
+      "implementation": "jax",
+      "unchanged_scientific_source_files": 22
+    },
+    {
+      "implementation": "tensorflow",
+      "notebook_outputs_unchanged": true
+    },
+    {
+      "implementation": "pytorch",
+      "notebook_outputs_unchanged": true
+    },
+    {
+      "implementation": "jax",
+      "notebook_outputs_unchanged": true
+    }
+  ],
+  "r_source_parse": "PASS",
+  "python_source_parse": "PASS",
+  "scope": "Presentation and file layout only; prior framework execution receipts remain labeled by their original hashes.",
+  "pytorch_regression": {
+    "passed": 53,
+    "skipped": 1,
+    "skip": "Optional fresh ONNX export test: export dependency unavailable in local check environment; previously validated export artifacts preserved.",
+    "seconds": 5.74
+  },
+  "browser": {
+    "viewports": [
+      430,
+      1280
+    ],
+    "implementations": [
+      "tensorflow",
+      "pytorch",
+      "jax"
+    ],
+    "page_overflow": false,
+    "broken_images": 0,
+    "math_errors": 0,
+    "matching_topic_links": "R/TensorFlow message-equivalence to JAX message-equivalence verified by click"
+  }
+}

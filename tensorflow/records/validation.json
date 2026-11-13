@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "scope": "Compact source/document supplement; no checkpoints or bulk prediction archive.",
+  "scientific_code_unchanged": true,
+  "displayed_figures_and_tables_unchanged": true,
+  "source_cells_verified": 78,
+  "counts": {
+    "r_files": 13,
+    "r_lines": 4744,
+    "python_files": 23,
+    "python_lines": 2016,
+    "notebook_cells": 165,
+    "code_cells": 103,
+    "r_code_cells": 73,
+    "visible_code_lines": 2468,
+    "source_definitions": 78,
+    "visible_source_lines": 2322,
+    "figures": 19
+  },
+  "numerical": {
+    "gaussian": {
+      "checks": 49,
+      "max_absolute_error": 9.29204629906977e-15,
+      "status": "PASS",
+      "file": "results/message_equivalence/gaussian_mlp_exact_message_checks.csv"
+    },
+    "ep_mfvi": {
+      "checks": 110,
+      "max_absolute_error": 1.4210854715202e-14,
+      "status": "PASS",
+      "file": "results/shared_layers/message_checks.csv"
+    }
+  },
+  "compact_r_replay": {
+    "status": "PASS",
+    "r_cells": 73,
+    "recorded_benchmark_cells": 9,
+    "training": false
+  },
+  "plot_data": {
+    "files": 28,
+    "coordinates": "Integer counts reproduce the exact plotted rates; no decimation or smoothing."
+  },
+  "html": {
+    "math": {
+      "count": 470,
+      "errors": [],
+      "images": 19,
+      "brokenImages": 0
+    },
+    "error_highlight_spans": 0,
+    "broken_links": [],
+    "sha256": "53d4f1ede988e24f68b9cb6ff9fea83b9d4e522765b6dfdc235d997377f19cd9"
+  },
+  "pdf": {
+    "pages": 90,
+    "offpage_words": [],
+    "sha256": "9f7efb42997849ea18bb9b534cf11b26c087d5479df4e4aeb25eb1f191b66303"
+  },
+  "new_training": false,
+  "checkpoint_files": 0
+}

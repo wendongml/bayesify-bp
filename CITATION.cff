@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use Bayesify, please cite the NeurIPS 2026 paper."
+type: software
+title: "Bayesify"
+version: 0.1.0
+date-released: 2026-11-12
+authors:
+  - family-names: Dong
+    given-names: Wen
+repository-code: "https://github.com/wendongml/bayesify-bp"
+url: "https://wendongml.github.io/bayesify-bp/"
+abstract: >-
+  Reference code, derivations, tutorials, and experiments for moment-based
+  Bayesian neural-network inference by belief propagation and pseudo-gradient
+  backpropagation.
+preferred-citation:
+  type: conference-paper
+  title: "Bayesian Backprop as Belief Propagation: Single-Pass Predictive Uncertainty"
+  authors:
+    - family-names: Dong
+      given-names: Wen
+  collection-title: "Advances in Neural Information Processing Systems"
+  year: 2026
+  url: "https://neurips.cc/virtual/2026/poster/154383"

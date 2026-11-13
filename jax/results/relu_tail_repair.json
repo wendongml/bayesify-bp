@@ -1,0 +1,7 @@
+{
+  "failed_epoch": 33,
+  "failed_batch": 281,
+  "loss": 0.28376320004463196,
+  "finite_after_repair": true,
+  "change": "analytic Gaussian ReLU shared-factor JVP; no clipping or optimizer change"
+}

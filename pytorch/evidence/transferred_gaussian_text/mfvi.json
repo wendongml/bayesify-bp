@@ -1,0 +1,21 @@
+{
+  "method": "mfvi",
+  "scope": "native JAX evaluation/likelihood derivative of transferred existing belief; no new training",
+  "examples": 872,
+  "batch": 8,
+  "compile_seconds": 14.271226347000265,
+  "inference_seconds": 5.824904365001203,
+  "n": 872.0,
+  "accuracy": 0.9185779816513762,
+  "nll": 0.2259801311024908,
+  "brier": 0.1293740455615495,
+  "ece": 0.030366798053151803,
+  "aurc": 0.019664442979044246,
+  "excess_aurc": 0.016209185171917877,
+  "error_auroc": 0.8422922051660776,
+  "error_auprc": 0.31573090176219537,
+  "risk80": 0.03868194842406877,
+  "risk90": 0.048407643312101914,
+  "risk95": 0.06634499396863691,
+  "entropy": 0.17015185047772016
+}

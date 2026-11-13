@@ -1,0 +1,104 @@
+cell,section,lines,hidden,embedded_data,file,language
+3,1. Overview and Gaussian computations,16,True,False,,Python
+4,1. Overview and Gaussian computations,17,True,True,,Python
+5,1. Overview and Gaussian computations,126,True,False,python/keras_graph.py,Python
+6,1. Overview and Gaussian computations,48,True,False,python/run_original.py,Python
+8,1. Overview and Gaussian computations,15,False,False,,R
+9,1. Overview and Gaussian computations,4,True,False,,Python
+10,1. Overview and Gaussian computations,31,True,False,R/setup.R,R
+11,1. Overview and Gaussian computations,159,True,False,R/plots.R,R
+12,1. Overview and Gaussian computations,14,True,False,R/plots.R,R
+13,1. Overview and Gaussian computations,70,True,False,R/plots.R,R
+15,1. Overview and Gaussian computations,39,False,False,R/gaussian.R,R
+17,1. Overview and Gaussian computations,85,False,False,R/layers.R,R
+19,1. Overview and Gaussian computations,95,False,False,R/layers.R,R
+23,"2. Gaussian, EP and MFVI: message passing equals backpropagation",64,False,False,R/gaussian.R,R
+24,"2. Gaussian, EP and MFVI: message passing equals backpropagation",47,False,False,R/gaussian.R,R
+25,"2. Gaussian, EP and MFVI: message passing equals backpropagation",119,True,False,R/checks.R,R
+26,"2. Gaussian, EP and MFVI: message passing equals backpropagation",3,False,False,,R
+30,"2. Gaussian, EP and MFVI: message passing equals backpropagation",94,False,False,R/messages.R,R
+31,"2. Gaussian, EP and MFVI: message passing equals backpropagation",163,False,False,R/messages.R,R
+32,"2. Gaussian, EP and MFVI: message passing equals backpropagation",156,False,False,R/messages.R,R
+33,"2. Gaussian, EP and MFVI: message passing equals backpropagation",48,False,False,R/messages.R,R
+34,"2. Gaussian, EP and MFVI: message passing equals backpropagation",33,False,False,R/messages.R,R
+35,"2. Gaussian, EP and MFVI: message passing equals backpropagation",64,True,False,R/checks.R,R
+38,"2. Gaussian, EP and MFVI: message passing equals backpropagation",3,False,False,,R
+40,"2. Gaussian, EP and MFVI: message passing equals backpropagation",2,False,False,,R
+45,3. Approximation quality versus Monte Carlo and computation,101,False,False,R/covariance.R,R
+46,3. Approximation quality versus Monte Carlo and computation,52,False,False,R/covariance.R,R
+47,3. Approximation quality versus Monte Carlo and computation,58,False,False,R/covariance.R,R
+49,3. Approximation quality versus Monte Carlo and computation,40,True,False,R/results.R,R
+50,3. Approximation quality versus Monte Carlo and computation,35,True,False,R/results.R,R
+51,3. Approximation quality versus Monte Carlo and computation,121,True,False,R/plots.R,R
+52,3. Approximation quality versus Monte Carlo and computation,3,False,False,,R
+55,3. Approximation quality versus Monte Carlo and computation,56,False,False,R/covariance.R,R
+56,3. Approximation quality versus Monte Carlo and computation,101,False,False,R/covariance.R,R
+58,3. Approximation quality versus Monte Carlo and computation,3,False,False,,R
+63,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",182,True,False,R/plots.R,R
+64,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",1,False,False,,R
+66,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",145,False,False,R/models.R,R
+70,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",70,False,False,R/inference.R,R
+71,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",55,False,False,R/inference.R,R
+72,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",141,False,False,R/inference.R,R
+73,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",21,False,False,R/inference.R,R
+74,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",104,False,False,R/inference.R,R
+77,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",48,False,False,R/uncertainty.R,R
+79,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",205,True,False,R/experiments.R,R
+80,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",21,False,False,,R
+82,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",5,False,False,,R
+84,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",5,False,False,,R
+87,"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",10,False,False,,R
+93,5. CIFAR-10: shared features in ResNet and DenseNet,63,True,False,R/results.R,R
+94,5. CIFAR-10: shared features in ResNet and DenseNet,22,True,False,R/results.R,R
+96,5. CIFAR-10: shared features in ResNet and DenseNet,118,False,False,R/models.R,R
+97,5. CIFAR-10: shared features in ResNet and DenseNet,1,False,False,,R
+99,5. CIFAR-10: shared features in ResNet and DenseNet,1,False,False,,R
+100,5. CIFAR-10: shared features in ResNet and DenseNet,80,True,False,R/experiments.R,R
+101,5. CIFAR-10: shared features in ResNet and DenseNet,626,True,False,R/experiments.R,R
+102,5. CIFAR-10: shared features in ResNet and DenseNet,70,True,False,R/experiments.R,R
+103,5. CIFAR-10: shared features in ResNet and DenseNet,164,True,False,R/experiments.R,R
+104,5. CIFAR-10: shared features in ResNet and DenseNet,40,True,False,R/results.R,R
+105,5. CIFAR-10: shared features in ResNet and DenseNet,27,True,False,R/plots.R,R
+106,5. CIFAR-10: shared features in ResNet and DenseNet,38,False,False,,R
+108,5. CIFAR-10: shared features in ResNet and DenseNet,19,False,False,,R
+111,5. CIFAR-10: shared features in ResNet and DenseNet,4,False,False,,R
+112,5. CIFAR-10: shared features in ResNet and DenseNet,1,True,False,,R
+116,6. GPT-2 with LoRA: SST-2,35,False,False,R/models.R,R
+117,6. GPT-2 with LoRA: SST-2,154,False,False,R/covariance.R,R
+118,6. GPT-2 with LoRA: SST-2,46,False,False,R/covariance.R,R
+119,6. GPT-2 with LoRA: SST-2,15,True,False,R/models.R,R
+120,6. GPT-2 with LoRA: SST-2,63,False,False,R/models.R,R
+124,6. GPT-2 with LoRA: SST-2,1,False,False,,R
+125,6. GPT-2 with LoRA: SST-2,35,True,False,R/results.R,R
+126,6. GPT-2 with LoRA: SST-2,38,True,False,R/results.R,R
+127,6. GPT-2 with LoRA: SST-2,48,True,False,R/results.R,R
+129,6. GPT-2 with LoRA: SST-2,16,True,False,python/gpt2/adamw.json,Python
+130,6. GPT-2 with LoRA: SST-2,46,True,False,python/gpt2/adjoint_variance.py,Python
+131,6. GPT-2 with LoRA: SST-2,41,True,False,python/gpt2/data.py,Python
+132,6. GPT-2 with LoRA: SST-2,66,True,False,python/gpt2/model.py,Python
+133,6. GPT-2 with LoRA: SST-2,19,True,False,python/gpt2/moment_ep.json,Python
+134,6. GPT-2 with LoRA: SST-2,57,True,False,python/gpt2/moment_training.py,Python
+135,6. GPT-2 with LoRA: SST-2,119,True,False,python/gpt2/moments.py,Python
+136,6. GPT-2 with LoRA: SST-2,81,True,False,python/gpt2/optimizers.py,Python
+137,6. GPT-2 with LoRA: SST-2,24,True,False,python/gpt2/run_selected.py,Python
+138,6. GPT-2 with LoRA: SST-2,17,True,False,python/gpt2/sampled_mfvi.json,Python
+139,6. GPT-2 with LoRA: SST-2,118,True,False,python/gpt2/train_sampled.py,Python
+140,6. GPT-2 with LoRA: SST-2,37,True,False,python/gpt2/vadam_normalization.py,Python
+141,6. GPT-2 with LoRA: SST-2,259,True,False,python/blob_mirror/compact_moments.py,Python
+142,6. GPT-2 with LoRA: SST-2,17,True,False,python/blob_mirror/fused_carrier.py,Python
+143,6. GPT-2 with LoRA: SST-2,52,True,False,python/blob_mirror/gaussian_logistic.py,Python
+144,6. GPT-2 with LoRA: SST-2,249,True,False,python/blob_mirror/nonlinear_moments.py,Python
+145,6. GPT-2 with LoRA: SST-2,48,True,False,python/blob_mirror/predict.py,Python
+146,6. GPT-2 with LoRA: SST-2,58,True,False,python/blob_mirror/replicate.py,Python
+147,6. GPT-2 with LoRA: SST-2,98,True,False,python/blob_mirror/source_stream_moments.py,Python
+148,6. GPT-2 with LoRA: SST-2,102,True,False,python/blob_mirror/source_stream_transfer.py,Python
+149,6. GPT-2 with LoRA: SST-2,140,True,False,python/blob_mirror/train_fixed_transfer.py,Python
+150,6. GPT-2 with LoRA: SST-2,69,True,False,python/blob_mirror/transfer_data.py,Python
+151,6. GPT-2 with LoRA: SST-2,101,True,False,python/blob_mirror/transfer_model.py,Python
+152,6. GPT-2 with LoRA: SST-2,60,True,False,python/blob_mirror/transfer_moments.py,Python
+153,6. GPT-2 with LoRA: SST-2,25,True,False,R/results.R,R
+154,6. GPT-2 with LoRA: SST-2,4,True,False,,Python
+155,6. GPT-2 with LoRA: SST-2,5,False,False,,R
+160,7. RoBERTa with LoRA: CLINC150,130,False,False,R/models.R,R
+161,7. RoBERTa with LoRA: CLINC150,1,False,False,,R
+162,7. RoBERTa with LoRA: CLINC150,5,False,False,,R

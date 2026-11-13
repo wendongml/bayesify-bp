@@ -1,0 +1,9 @@
+section,first_cell,last_cell,code_lines,visible_code_lines,embedded_data_lines
+1. Overview and Gaussian computations,1,20,702,234,17
+"2. Gaussian, EP and MFVI: message passing equals backpropagation",21,41,796,613,0
+3. Approximation quality versus Monte Carlo and computation,42,60,570,374,0
+"4. MNIST: MLP and LeNet, with common uncertainty diagnostics",61,88,1013,626,0
+5. CIFAR-10: shared features in ResNet and DenseNet,89,113,1274,181,0
+6. GPT-2 with LoRA: SST-2,114,156,2363,304,0
+7. RoBERTa with LoRA: CLINC150,157,163,136,136,0
+8. Results and reproduction,164,165,0,0,0

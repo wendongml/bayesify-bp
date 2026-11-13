@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-12",
+  "status": "PASS",
+  "execution": "Empty-directory standalone notebook in Consumer Colab L4; sources reconstructed from notebook payload",
+  "notebook_sha256": "05b396683b62998319cf54afe8015619c4faa5a74a60285ff39c6b13e64f7a00",
+  "cells": 93,
+  "code_cells": 15,
+  "executed_cells": 15,
+  "error_outputs": 0,
+  "kernel": "python3",
+  "tests_run": 55,
+  "tests_passed": 55,
+  "tests_skipped": 0,
+  "local_tests_passed": 55,
+  "native_dirty_training": {
+    "runs": 5,
+    "epochs_each": 30,
+    "seed": 41,
+    "training_observations": 110000,
+    "validation_observations": 10000
+  },
+  "matched_resnet_comparisons": 80,
+  "matched_gaussian_text_comparisons": 8,
+  "training_scope": "Full native Dirty-MNIST fits; existing Gaussian GPT-2 beliefs replayed without new text training. Historical benchmark fits retain original source attribution.",
+  "source_inventory": "../site/source_lines.csv",
+  "mathematical_correspondence": "MATH_COVERAGE.md",
+  "skip_reason": null,
+  "python": "3.12.3",
+  "packages": {
+    "jax": "0.4.38",
+    "flax": "0.10.4",
+    "optax": "0.2.4",
+    "numpy": "2.2.6",
+    "scipy": "1.18.1"
+  },
+  "test_source_sha256": "ca6eff67998be7deeb59587624e218c70e6b0c920605d3e2c254b169ed724f4c",
+  "rendering": {
+    "pdf_pages": 70,
+    "body_pt": 10,
+    "code_pt": 9.2,
+    "html": [
+      {
+        "page": "/jax/README.html",
+        "width": 1280,
+        "documentWidth": 1280,
+        "formulas": 496,
+        "mathErrors": 0,
+        "brokenImages": 0,
+        "chapters": 8,
+        "frameworks": 3
+      },
+      {
+        "page": "/jax/README.html",
+        "width": 430,
+        "documentWidth": 430,
+        "formulas": 496,
+        "mathErrors": 0,
+        "brokenImages": 0,
+        "chapters": 8,
+        "frameworks": 3
+      }
+    ],
+    "pdf_sha256": "ce3d1d7023a91e6b4a6c35710fb58c583543f46e9785c32e0f7973d03b97443f",
+    "html_sha256": "894a3a44d2314704b06d2e8543e3189db13257d975cc10cf450276e7ffcc7a63",
+    "representative_pages_visually_reviewed": true,
+    "latex_missing_glyphs": 0,
+    "latex_overfull_boxes": 0
+  }
+}

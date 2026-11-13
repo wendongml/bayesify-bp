@@ -1,0 +1,19 @@
+{
+  "architecture": "lenet",
+  "method": "sampled_ep",
+  "seed": 41,
+  "epochs": 30,
+  "batch": 128,
+  "learning_rate": 0.001,
+  "variance_rate": 0.001,
+  "temperature": 0.01,
+  "samples": 4,
+  "prediction_samples": 20,
+  "optimizer": "adam",
+  "weight_decay": 0.0,
+  "rank": 1,
+  "curvature_refresh": 2,
+  "correlated_readout": false,
+  "limit_train": 0,
+  "limit_validation": 0
+}

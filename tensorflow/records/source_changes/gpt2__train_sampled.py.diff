@@ -1,0 +1,11 @@
+--- original/train_sampled.py
++++ python/gpt2/train_sampled.py
+@@ -99,6 +99,8 @@
+         scores,prob=evaluate(model,val,method,draws=config.get('validation_draws',4),seed=10000+epoch)
+         row=dict(epoch=epoch+1,updates=global_step,training_seconds=training_seconds,training_objective=loss_sum/seen,**scores)
+         rows.append(row)
++        save(dest/f'epoch{epoch+1}.pt',model,opt,config,epoch+1,global_step,generator,metrics=scores)
++        np.savez_compressed(dest/f'epoch{epoch+1}_predictions.npz',probabilities=prob.numpy(),labels=val[2].cpu().numpy())
+         if scores['nll']<best:
+             best=scores['nll'];save(dest/'best.pt',model,opt,config,epoch+1,global_step,generator,metrics=scores)
+             np.savez_compressed(dest/'best_predictions.npz',probabilities=prob.numpy(),labels=val[2].cpu().numpy())

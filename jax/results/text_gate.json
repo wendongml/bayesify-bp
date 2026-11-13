@@ -1,0 +1,62 @@
+[
+  {
+    "architecture": "gpt2",
+    "check": "pretrained backbone",
+    "maximum_absolute_error": 1.52587890625e-05,
+    "status": "PASS"
+  },
+  {
+    "architecture": "gpt2",
+    "check": "ordinary full pretrained update",
+    "loss": 0.6483526229858398,
+    "mean_change_l2_sum": 0.39854252215400265,
+    "seconds_with_compile": 17.932887742000048,
+    "status": "PASS"
+  },
+  {
+    "architecture": "gpt2",
+    "check": "sampled full pretrained update",
+    "loss": 0.6483526229858398,
+    "mean_change_l2_sum": 0.3984167172573052,
+    "seconds_with_compile": 66.55818715999999,
+    "status": "PASS"
+  },
+  {
+    "architecture": "gpt2",
+    "check": "hybrid full pretrained update",
+    "loss": 0.648360013961792,
+    "mean_change_l2_sum": 0.39841665765266043,
+    "seconds_with_compile": 138.11731724100002,
+    "status": "PASS"
+  },
+  {
+    "architecture": "roberta",
+    "check": "pretrained backbone",
+    "maximum_absolute_error": 3.814697265625e-06,
+    "status": "PASS"
+  },
+  {
+    "architecture": "roberta",
+    "check": "ordinary full pretrained update",
+    "loss": 5.042479038238525,
+    "mean_change_l2_sum": 3.0169358831735735,
+    "seconds_with_compile": 17.723775844999864,
+    "status": "PASS"
+  },
+  {
+    "architecture": "roberta",
+    "check": "sampled full pretrained update",
+    "loss": 5.042479038238525,
+    "mean_change_l2_sum": 3.016788431143283,
+    "seconds_with_compile": 71.27589562100002,
+    "status": "PASS"
+  },
+  {
+    "architecture": "roberta",
+    "check": "hybrid full pretrained update",
+    "loss": 5.042479038238525,
+    "mean_change_l2_sum": 3.0167885857428303,
+    "seconds_with_compile": 168.94148046600003,
+    "status": "PASS"
+  }
+]

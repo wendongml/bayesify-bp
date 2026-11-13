@@ -1,0 +1,15 @@
+{
+  "format": "Compact reviewer supplement",
+  "checkpoints_included": false,
+  "bulk_predictions_included": false,
+  "contains": [
+    "Notebook with complete executable source and all 19 figures / 9 tables",
+    "Offline HTML and one 90-page LaTeX PDF",
+    "13 R files and original Python training implementations",
+    "Small mathematical fixtures and five expanded architecture PDFs",
+    "Compact metric tables, histories, and 28 exact plot-data files"
+  ],
+  "default_execution": "Recompute mathematical checks and fixed-reference figures; display labeled recorded benchmark outputs.",
+  "fresh_training": "Public-data switches regenerate fits and per-example prediction arrays.",
+  "omitted": "Trained parameter/optimizer checkpoints, datasets, full prediction-draw tensors, and unselected diagnostic archives."
+}

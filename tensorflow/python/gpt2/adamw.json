@@ -1,0 +1,16 @@
+{
+  "seed": 41,
+  "variance": 1e-06,
+  "precision": 2500,
+  "tau": 0.0001,
+  "limit": 0,
+  "epochs": 3,
+  "batch": 32,
+  "decay": 0.01,
+  "max_hours": 2,
+  "schedule": "warmup_cosine",
+  "validation_draws": 16,
+  "method": "adamw",
+  "lr": 0.0003,
+  "name": "full_adamw_lr0.0003_reg0.01_s41"
+}

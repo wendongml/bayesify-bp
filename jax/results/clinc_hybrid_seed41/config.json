@@ -1,0 +1,27 @@
+{
+  "task": "clinc",
+  "method": "hybrid",
+  "seed": 41,
+  "model": {
+    "architecture": "roberta",
+    "width": 768,
+    "heads": 12,
+    "layers": 12,
+    "intermediate": 3072,
+    "vocabulary": 50265,
+    "positions": 514,
+    "rank": 8,
+    "alpha": 8,
+    "classes": 150,
+    "eps": 1e-05,
+    "pad_id": 1,
+    "family": "a"
+  },
+  "epochs": 6,
+  "batch": 32,
+  "observations": 13500,
+  "limit_train": 0,
+  "prediction_samples": 10,
+  "precision": "float32 highest matmul",
+  "selection": "training-only stopping set"
+}

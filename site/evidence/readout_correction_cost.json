@@ -1,0 +1,92 @@
+[
+  {
+    "method": "mfvi",
+    "networks": 256,
+    "mean_error": 0.13244469614729776,
+    "variance_error": 0.14882492381818277,
+    "seconds": 0.1214556630000061,
+    "preparation_seconds": 1.8866430959999434,
+    "total_seconds": 2.008100301000013
+  },
+  {
+    "method": "mfvi",
+    "networks": 1024,
+    "mean_error": 0.12001643580481389,
+    "variance_error": 0.16985673074219088,
+    "seconds": 0.4713725809999687,
+    "preparation_seconds": 1.8866430959999434,
+    "total_seconds": 2.358016963999944
+  },
+  {
+    "method": "mfvi",
+    "networks": 4096,
+    "mean_error": 0.10107057147521258,
+    "variance_error": 0.17170136482970455,
+    "seconds": 1.865965770999992,
+    "preparation_seconds": 1.8866430959999434,
+    "total_seconds": 3.752609737000057
+  },
+  {
+    "method": "mfvi",
+    "networks": 16384,
+    "mean_error": 0.027924921037881186,
+    "variance_error": 0.058493637861532145,
+    "seconds": 7.451680710000119,
+    "preparation_seconds": 1.8866430959999434,
+    "total_seconds": 9.338324722999914
+  },
+  {
+    "method": "mfvi",
+    "networks": 65536,
+    "mean_error": 0.014548425519770987,
+    "variance_error": 0.02921063540800426,
+    "seconds": 29.916073444000176,
+    "preparation_seconds": 1.8866430959999434,
+    "total_seconds": 31.80271761500012
+  },
+  {
+    "method": "ep",
+    "networks": 256,
+    "mean_error": 0.06761122236562028,
+    "variance_error": 0.07130517299402478,
+    "seconds": 0.12234263999994255,
+    "preparation_seconds": 0.1782716979998895,
+    "total_seconds": 0.3006155499997476
+  },
+  {
+    "method": "ep",
+    "networks": 1024,
+    "mean_error": 0.09108975027456075,
+    "variance_error": 0.07765453314960302,
+    "seconds": 0.47405460699997093,
+    "preparation_seconds": 0.1782716979998895,
+    "total_seconds": 0.6523275319998447
+  },
+  {
+    "method": "ep",
+    "networks": 4096,
+    "mean_error": 0.027328174899653765,
+    "variance_error": 0.020858777656355684,
+    "seconds": 1.8826673009998558,
+    "preparation_seconds": 0.1782716979998895,
+    "total_seconds": 2.0609400219998406
+  },
+  {
+    "method": "ep",
+    "networks": 16384,
+    "mean_error": 0.009783612549318957,
+    "variance_error": 0.009657508565537659,
+    "seconds": 7.516395723999949,
+    "preparation_seconds": 0.1782716979998895,
+    "total_seconds": 7.694668636999722
+  },
+  {
+    "method": "ep",
+    "networks": 65536,
+    "mean_error": 0.012878896281319448,
+    "variance_error": 0.006951121027719417,
+    "seconds": 29.97171311599982,
+    "preparation_seconds": 0.1782716979998895,
+    "total_seconds": 30.149986483999783
+  }
+]

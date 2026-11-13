@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "comparisons": [
+    {
+      "framework": "r",
+      "quantity": "mfvi_value",
+      "max_abs": 0.0
+    },
+    {
+      "framework": "r",
+      "quantity": "mfvi_gm",
+      "max_abs": 2.220446049250313e-16
+    },
+    {
+      "framework": "r",
+      "quantity": "mfvi_gv",
+      "max_abs": 8.326672684688674e-17
+    },
+    {
+      "framework": "r",
+      "quantity": "ep_value",
+      "max_abs": 2.7755575615628914e-17
+    },
+    {
+      "framework": "r",
+      "quantity": "ep_gm",
+      "max_abs": 5.551115123125783e-17
+    },
+    {
+      "framework": "r",
+      "quantity": "ep_gv",
+      "max_abs": 2.7755575615628914e-17
+    },
+    {
+      "framework": "jax",
+      "quantity": "mfvi_value",
+      "max_abs": 0.0
+    },
+    {
+      "framework": "jax",
+      "quantity": "mfvi_gm",
+      "max_abs": 0.0
+    },
+    {
+      "framework": "jax",
+      "quantity": "mfvi_gv",
+      "max_abs": 0.0
+    },
+    {
+      "framework": "jax",
+      "quantity": "ep_value",
+      "max_abs": 0.0
+    },
+    {
+      "framework": "jax",
+      "quantity": "ep_gm",
+      "max_abs": 5.551115123125783e-17
+    },
+    {
+      "framework": "jax",
+      "quantity": "ep_gv",
+      "max_abs": 2.7755575615628914e-17
+    }
+  ]
+}

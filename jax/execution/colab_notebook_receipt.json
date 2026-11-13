@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "utc": "2026-11-12T02:07:11.505495+00:00",
+  "seconds": 631.2069727359994,
+  "code_cells": 13,
+  "input_notebook_sha256": "de3249a833ef8535740123694e89d0346461e2dc7491b540b6b47a726227b91b",
+  "executed_notebook_sha256": "d56e2da267340c0bf79f04b911b9417a55c7351ece2a958f38a00dc5a12c8d5e",
+  "scope": "Standalone Consumer Colab notebook execution in a fresh kernel/directory. The embedded benchmark records are from separately executed full native training runs.",
+  "checks": {
+    "tests_run": 54,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 431.1792716819982,
+    "jax": "0.4.38",
+    "versions": {
+      "jax": "0.4.38",
+      "flax": "0.10.4",
+      "optax": "0.2.4",
+      "numpy": "1.26.4",
+      "scipy": "1.16.3"
+    },
+    "python": "3.13.16",
+    "source_sha256": "85001cd9621bb036f2741f7374bb5c65ddcffb7dfd6f73b8da440ae5df36ec60",
+    "utc": "2026-11-12T02:07:05.319737+00:00",
+    "devices": [
+      "cuda:0"
+    ],
+    "status": "PASS"
+  }
+}

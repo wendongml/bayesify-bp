@@ -1,0 +1,47 @@
+[
+  {
+    "file": "results/displayed_tables/cell_080_table_1.csv",
+    "cell": 80,
+    "caption": "MNIST models: quality, uncertainty and cost (mean \u00b1 seed SD)"
+  },
+  {
+    "file": "results/displayed_tables/cell_106_table_1.csv",
+    "cell": 106,
+    "caption": "ResNet-20: residual reuse on CIFAR-10: quality and measured cost"
+  },
+  {
+    "file": "results/displayed_tables/cell_106_table_1.csv",
+    "cell": 106,
+    "caption": "Recorded settings; NA marks an inactive parameter"
+  },
+  {
+    "file": "results/displayed_tables/cell_108_table_1.csv",
+    "cell": 108,
+    "caption": "DenseNet-40: dense reuse on CIFAR-10: quality and measured cost"
+  },
+  {
+    "file": "results/displayed_tables/cell_108_table_1.csv",
+    "cell": 108,
+    "caption": "Recorded settings; NA marks an inactive parameter"
+  },
+  {
+    "file": "results/displayed_tables/cell_155_table_1.csv",
+    "cell": 155,
+    "caption": "Predictive quality and recorded cost; ratios use the corresponding ordinary protocol"
+  },
+  {
+    "file": "results/displayed_tables/cell_155_table_1.csv",
+    "cell": 155,
+    "caption": "Uncertainty from the same saved predictions"
+  },
+  {
+    "file": "results/displayed_tables/cell_162_table_1.csv",
+    "cell": 162,
+    "caption": "Predictive quality and recorded cost; ratios use the corresponding ordinary protocol"
+  },
+  {
+    "file": "results/displayed_tables/cell_162_table_1.csv",
+    "cell": 162,
+    "caption": "Uncertainty from the same saved predictions"
+  }
+]

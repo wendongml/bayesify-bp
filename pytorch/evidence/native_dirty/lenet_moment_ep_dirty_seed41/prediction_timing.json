@@ -1,0 +1,22 @@
+{
+  "method": "moment_ep",
+  "checkpoint_epoch": 26,
+  "examples": 10000,
+  "batch": 128,
+  "device": "NVIDIA L4",
+  "repetitions": 3,
+  "times": {
+    "with_records": [
+      1.5282379469990701,
+      1.5808395680014655,
+      1.782382711999162
+    ],
+    "values_only": [
+      1.0194711459989776,
+      1.0040118119995896,
+      1.004346882000391
+    ]
+  },
+  "historical_replay_maximum_probability_change": 0.0018805265426635742,
+  "maximum_probability_change": 0.0
+}

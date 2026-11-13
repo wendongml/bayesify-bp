@@ -1,0 +1,11 @@
+--- bayesian_backprop_advanced_tutorial/analysis/blob_replication_20261102/revision_v2/transfer_data.py
++++ python/blob_mirror/transfer_data.py
+@@ -6,7 +6,7 @@
+ from datasets import load_dataset
+ from transformers import AutoTokenizer
+ 
+-ROOT=Path('/content/blob_replication/transfer')
++ROOT=Path(__file__).resolve().parent/'results'
+ REVISIONS={'sst2':'8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb',
+            'clinc':'155b9c710419136e17307b80d0a13e68cd46b4ec'}
+ 

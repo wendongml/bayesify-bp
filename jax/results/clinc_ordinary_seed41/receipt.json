@@ -1,0 +1,10 @@
+{
+  "framework": "jax",
+  "devices": [
+    "cuda:0"
+  ],
+  "training_seconds": 490.7328582320001,
+  "compile_seconds": 49.95933067599981,
+  "completed_epochs": 6,
+  "status": "full_fixed_budget"
+}

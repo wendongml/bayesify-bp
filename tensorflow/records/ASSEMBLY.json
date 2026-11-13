@@ -1,0 +1,29 @@
+{
+  "scope": "Compact source/document supplement; no checkpoints or bulk prediction archive.",
+  "notebook": "README.ipynb",
+  "counts": {
+    "r_files": 13,
+    "r_lines": 4744,
+    "python_files": 23,
+    "python_lines": 2016,
+    "notebook_cells": 165,
+    "code_cells": 103,
+    "r_code_cells": 73,
+    "visible_code_lines": 2468,
+    "source_definitions": 78,
+    "visible_source_lines": 2322,
+    "figures": 19
+  },
+  "document_files": {
+    "README.ipynb": "722382463d3fbfc05fd262b07c5b80f196b84934e40987a8ecf2daad1fd1f3aa",
+    "README.html": "53d4f1ede988e24f68b9cb6ff9fea83b9d4e522765b6dfdc235d997377f19cd9",
+    "output/pdf/README.pdf": "9f7efb42997849ea18bb9b534cf11b26c087d5479df4e4aeb25eb1f191b66303",
+    "README.md": "8da94852ab72b1ccd0d9f14d7462f3e2e3d87e4ab0fa5515f663b0fd2928c556",
+    "SECTIONS.md": "33d3aa4bedc2396382b151bb01ff5a57883676bc6b06607ad21b0cd19b31f843"
+  },
+  "source_manifest": "source_inventory.json",
+  "validation": "validation.json",
+  "numerical_results": "results/README.md",
+  "checkpoints_included": false,
+  "bulk_prediction_arrays_included": false
+}

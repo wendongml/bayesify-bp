@@ -1,0 +1,1 @@
+{"validation_examples": 5000, "finite": true, "maximum_probability_sum_error": 2.384185791015625e-07, "change": "HIGHEST multiplication precision for small class-contrast covariance; no jitter"}

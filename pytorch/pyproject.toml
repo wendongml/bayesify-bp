@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bayesify-torch"
+version = "0.1.0"
+description = "PyTorch moment propagation and Gaussian message passing for Bayesify"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "numpy>=1.24", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+inspect = [
+  "torchinfo>=1.8",
+  "onnx>=1.14",
+  "onnxoptimizer>=0.3.13",
+  "onnxruntime>=1.16",
+  "onnxscript>=0.1; python_version >= '3.10'",
+]
+tutorial = ["pandas>=2.0", "jupyter>=1.0", "nbconvert>=7.0", "beautifulsoup4>=4.12"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bayesify_torch = ["assets/*.npz"]

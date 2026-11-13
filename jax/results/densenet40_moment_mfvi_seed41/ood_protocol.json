@@ -1,0 +1,9 @@
+{
+  "ID": "complete CIFAR-10 test",
+  "OOD": "complete SVHN test",
+  "ID_count": 10000,
+  "OOD_count": 26032,
+  "preprocessing": "CIFAR training mean/std",
+  "selection": "no OOD tuning",
+  "checkpoint_epoch": 95
+}

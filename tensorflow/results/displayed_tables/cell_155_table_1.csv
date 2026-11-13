@@ -1,0 +1,6 @@
+Method,Brier (down),AURC (down),Error AUROC (up),Error AUPRC (up),Risk at 80% (down)
+"Ordinary AdamW, 1 epoch",0.12789,0.019875,0.84250,0.31577,0.035817
+"Sampled MFVI, 1 epoch",0.12647,0.018857,0.86031,0.39652,0.032951
+"Moment EP, 1 epoch",0.12586,0.019185,0.83708,0.26301,0.034384
+"Ordinary AdamW, 3 epochs",0.14088,0.019334,0.85213,0.32146,0.032951
+"Moment MFVI, 3 epochs",0.12226,0.018958,0.85165,0.36371,0.031519

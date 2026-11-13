@@ -1,0 +1,63 @@
+
+test_coupled_draw_identity (test_blob.BLoB.test_coupled_draw_identity) ... ok
+test_exact_kl_limit (test_blob.BLoB.test_exact_kl_limit) ... ok
+test_integer_power_schedule (test_blob.BLoB.test_integer_power_schedule) ... ok
+test_rank_one_output_and_update_identity (test_blob.BLoB.test_rank_one_output_and_update_identity) ... ok
+test_split_update_against_independent_recurrence (test_blob.BLoB.test_split_update_against_independent_recurrence) ... ok
+test_average_pool (test_core.Core.test_average_pool) ... ok
+test_cavi_each_update (test_core.Core.test_cavi_each_update) ... E1112 20:06:48.328649   48024 hlo_lexer.cc:443] Failed to parse int literal: 10538078278293000160018428
+ok
+test_chain (test_core.Core.test_chain) ... ok
+test_complete_mlp_messages (test_core.Core.test_complete_mlp_messages) ... ok
+test_convolution (test_core.Core.test_convolution) ... ok
+test_covariance_quadratic_term (test_core.Core.test_covariance_quadratic_term) ... ok
+test_dense (test_core.Core.test_dense) ... ok
+test_deterministic_and_tiny (test_core.Core.test_deterministic_and_tiny) ... ok
+test_diagonal_roundtrip (test_core.Core.test_diagonal_roundtrip) ... ok
+test_full_roundtrip (test_core.Core.test_full_roundtrip) ... ok
+test_image_architecture_float32_with_x64_enabled (test_core.Core.test_image_architecture_float32_with_x64_enabled) ... ok
+test_jit_update (test_core.Core.test_jit_update) ... ok
+test_linear_layers (test_core.Core.test_linear_layers) ... ok
+test_literal_custom_vjp (test_core.Core.test_literal_custom_vjp) ... E1112 20:07:33.834049   48024 hlo_lexer.cc:443] Failed to parse int literal: 10538078278293000160018428
+ok
+test_max_pool (test_core.Core.test_max_pool) ... ok
+test_normalization (test_core.Core.test_normalization) ... ok
+test_relu (test_core.Core.test_relu) ... ok
+test_scalar_negative_control (test_core.Core.test_scalar_negative_control) ... ok
+test_shared_parameter_accumulation (test_core.Core.test_shared_parameter_accumulation) ... ok
+test_shared_residual (test_core.Core.test_shared_residual) ... ok
+test_structured_woodbury (test_core.Core.test_structured_woodbury) ... ok
+test_full_weight_embedding_and_reverse (test_full_transformer.FullTransformer.test_full_weight_embedding_and_reverse) ... ok
+test_each_original_family_update (test_gaussian_text.GaussianText.test_each_original_family_update) ... ok
+test_vadam_frozen_and_sampled_updates (test_gaussian_text.GaussianText.test_vadam_frozen_and_sampled_updates) ... ok
+test_checkpoint_offsets_and_weight_blocks (test_inference.FrozenCheckpoint.test_checkpoint_offsets_and_weight_blocks) ... ok
+test_ep_site_and_revisit (test_inference.Inference.test_ep_site_and_revisit) ... ok
+test_kl_certificate (test_inference.Inference.test_kl_certificate) ... ok
+test_objective_gradients (test_inference.Inference.test_objective_gradients) ... ok
+test_price_readout_against_quadrature_autodiff (test_inference.Inference.test_price_readout_against_quadrature_autodiff) ... ok
+test_ipython_summary_capture (test_inspection.Inspection.test_ipython_summary_capture) ... ok
+test_shared_example_second_moment (test_residual.GradientMoments.test_shared_example_second_moment) ... ok
+test_linear_residual_is_zero_and_gaussian_head_matches (test_residual.Residual.test_linear_residual_is_zero_and_gaussian_head_matches) ... ok
+test_clean_and_ambiguous_data_do_not_share_a_timing_denominator (test_result_protocol.ResultProtocol.test_clean_and_ambiguous_data_do_not_share_a_timing_denominator) ... ok
+test_global_weight_bma (test_text_updates.TextUpdates.test_global_weight_bma) ... ok
+test_local_transformer_reverse (test_text_updates.TextUpdates.test_local_transformer_reverse) ... ok
+test_scalar_contrast_variance_and_reverse (test_text_updates.TextUpdates.test_scalar_contrast_variance_and_reverse) ... ok
+test_source_split_update_paths (test_text_updates.TextUpdates.test_source_split_update_paths) ... ok
+test_correlated_readout_float32_precision (test_training.Training.test_correlated_readout_float32_precision) ... ok
+test_five_mnist_update_paths (test_training.Training.test_five_mnist_update_paths) ... ok
+test_full_readout_literal (test_training.Training.test_full_readout_literal) ... ok
+test_root_and_covariance_heads_agree (test_training.Training.test_root_and_covariance_heads_agree) ... ok
+test_shared_relu_tail_derivatives (test_training.Training.test_shared_relu_tail_derivatives) ... ok
+test_shared_reverse (test_training.Training.test_shared_reverse) ... ok
+test_causal_prefix (test_transformers.Transformers.test_causal_prefix) ... ok
+test_jvp_local_matches_complete_model (test_transformers.Transformers.test_jvp_local_matches_complete_model) ... ok
+test_nonlinear_variance_gradient (test_transformers.Transformers.test_nonlinear_variance_gradient) ... ok
+test_probability_average (test_transformers.Transformers.test_probability_average) ... ok
+test_spherical_moments (test_transformers.Transformers.test_spherical_moments) ... ok
+test_scores_and_perfect_error_ranking (test_uncertainty.Uncertainty.test_scores_and_perfect_error_ranking) ... ok
+test_tied_ranking_is_order_independent (test_uncertainty.Uncertainty.test_tied_ranking_is_order_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 55 tests in 438.955s
+
+OK

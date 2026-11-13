@@ -1,0 +1,164 @@
+[
+  {
+    "file": "python/gpt2/train_sampled.py",
+    "original_sha256": "c2d3ee427aa4a200a4091be9fd04c191731a87010c3aa11987679211504d867f",
+    "sha256": "d4cdbe7f0cced31aaa75089c03efabc79c188011cf2bac349de821a95bd29004",
+    "adjustment": "Additional per-epoch checkpoint/prediction logging; the original training update is unchanged.",
+    "diff": "records/source_changes/gpt2__train_sampled.py.diff",
+    "original_filename": "train_sampled.py"
+  },
+  {
+    "file": "python/gpt2/model.py",
+    "original_sha256": "f24ea3f878d84da6b2b65f8501df2a3e30929a18f96972034ba40e7502a7d53a",
+    "sha256": "f24ea3f878d84da6b2b65f8501df2a3e30929a18f96972034ba40e7502a7d53a",
+    "adjustment": "none",
+    "original_filename": "model.py"
+  },
+  {
+    "file": "python/gpt2/data.py",
+    "original_sha256": "bbf3cd4c29d25666bd025e5074056bc592a3bada53dec2a3e7383a131eecfd13",
+    "sha256": "bbf3cd4c29d25666bd025e5074056bc592a3bada53dec2a3e7383a131eecfd13",
+    "adjustment": "none",
+    "original_filename": "data.py"
+  },
+  {
+    "file": "python/gpt2/optimizers.py",
+    "original_sha256": "6fd3a2dd4759fa6c4ecc59bf3bc1c3379a364c0cbfa7db1ca0af94770ba5f052",
+    "sha256": "6fd3a2dd4759fa6c4ecc59bf3bc1c3379a364c0cbfa7db1ca0af94770ba5f052",
+    "adjustment": "none",
+    "original_filename": "optimizers.py"
+  },
+  {
+    "file": "python/gpt2/moments.py",
+    "original_sha256": "cc6a5f092f7323b4232e6dadda0f2caa404fc765e3697600c50db9be7f0d9dc2",
+    "sha256": "cc6a5f092f7323b4232e6dadda0f2caa404fc765e3697600c50db9be7f0d9dc2",
+    "adjustment": "none",
+    "original_filename": "moments.py"
+  },
+  {
+    "file": "python/gpt2/moment_training.py",
+    "original_sha256": "9f524e75a276c7f8130b1d143ad703ecd06d406acc099a08b055b77b0949a50a",
+    "sha256": "9f524e75a276c7f8130b1d143ad703ecd06d406acc099a08b055b77b0949a50a",
+    "adjustment": "none",
+    "original_filename": "moment_training.py"
+  },
+  {
+    "file": "python/gpt2/adjoint_variance.py",
+    "original_sha256": "f0b75fc91ac722829d74eaa69174e0a6175a237959a7a73fcec01c2394e831e4",
+    "sha256": "f0b75fc91ac722829d74eaa69174e0a6175a237959a7a73fcec01c2394e831e4",
+    "adjustment": "none",
+    "original_filename": "adjoint_variance.py"
+  },
+  {
+    "file": "python/gpt2/vadam_normalization.py",
+    "original_sha256": "5f987de6d0c86e8101db37a555cfd8fd9375d4faa62eca3ab071b26be98607e1",
+    "sha256": "5f987de6d0c86e8101db37a555cfd8fd9375d4faa62eca3ab071b26be98607e1",
+    "adjustment": "none",
+    "original_filename": "vadam_normalization.py"
+  },
+  {
+    "file": "python/blob_mirror/train_fixed_transfer.py",
+    "original_sha256": "70339f3dcb6ae442ef780953fd2e0a6e0ef8b0536889a0bcbb349b8590ea3272",
+    "sha256": "e7317f8ff9cc72aef84f9bcd28c8b3c0beb0730cf33d3b0e7392916a9978676c",
+    "adjustment": "Portable paths / removal of cloud backup / retained constructors; see source diff.",
+    "diff": "records/source_changes/blob_mirror__train_fixed_transfer.py.diff",
+    "original_filename": "train_fixed_transfer.py"
+  },
+  {
+    "file": "python/blob_mirror/transfer_model.py",
+    "original_sha256": "1f35adf50d5e10d546bd03b72b50a71aab79ae7bc33cad9fb55479b4bbecf48a",
+    "sha256": "1f35adf50d5e10d546bd03b72b50a71aab79ae7bc33cad9fb55479b4bbecf48a",
+    "adjustment": "none",
+    "original_filename": "transfer_model.py"
+  },
+  {
+    "file": "python/blob_mirror/transfer_data.py",
+    "original_sha256": "7eece7c2971463607c540ad9b37ee729898a2f8baf1afeb02b710aabde8e9638",
+    "sha256": "e6059ce937ec3dedf053ccb9c048af8036d79c7f8ae30f4a4aa8cb8465725ecb",
+    "adjustment": "Portable paths / removal of cloud backup / retained constructors; see source diff.",
+    "diff": "records/source_changes/blob_mirror__transfer_data.py.diff",
+    "original_filename": "transfer_data.py"
+  },
+  {
+    "file": "python/blob_mirror/source_stream_transfer.py",
+    "original_sha256": "6cf044f1dbde58d87fc4489b9d3046b9cf969f13dc546d2e615c0534faa1f5a2",
+    "sha256": "6cf044f1dbde58d87fc4489b9d3046b9cf969f13dc546d2e615c0534faa1f5a2",
+    "adjustment": "none",
+    "original_filename": "source_stream_transfer.py"
+  },
+  {
+    "file": "python/blob_mirror/source_stream_moments.py",
+    "original_sha256": "bc299f2a396e10db95a8e97bb4ec709b6aee982e25939034afb32743fd834be9",
+    "sha256": "bc299f2a396e10db95a8e97bb4ec709b6aee982e25939034afb32743fd834be9",
+    "adjustment": "none",
+    "original_filename": "source_stream_moments.py"
+  },
+  {
+    "file": "python/blob_mirror/nonlinear_moments.py",
+    "original_sha256": "77fc9db13a92f83a412f18ee6d5129c18a2a432c1a04790d8b2359eda14efe68",
+    "sha256": "77fc9db13a92f83a412f18ee6d5129c18a2a432c1a04790d8b2359eda14efe68",
+    "adjustment": "none",
+    "original_filename": "nonlinear_moments.py"
+  },
+  {
+    "file": "python/blob_mirror/transfer_moments.py",
+    "original_sha256": "d59203caa447a16bcff4e6ac4b9137547b4b7d4a4d7e5de0ef9ff6448a9447bd",
+    "sha256": "d59203caa447a16bcff4e6ac4b9137547b4b7d4a4d7e5de0ef9ff6448a9447bd",
+    "adjustment": "none",
+    "original_filename": "transfer_moments.py"
+  },
+  {
+    "file": "python/blob_mirror/compact_moments.py",
+    "original_sha256": "461b7f5d9529a8eb0d0cf6345f46322e9839bb547c79417fada18dab186c8867",
+    "sha256": "461b7f5d9529a8eb0d0cf6345f46322e9839bb547c79417fada18dab186c8867",
+    "adjustment": "none",
+    "original_filename": "compact_moments.py"
+  },
+  {
+    "file": "python/blob_mirror/fused_carrier.py",
+    "original_sha256": "edc0c7e82a7f4c40888264a313e19e248f26ae50822ec6c4b42fe873fc23233c",
+    "sha256": "edc0c7e82a7f4c40888264a313e19e248f26ae50822ec6c4b42fe873fc23233c",
+    "adjustment": "none",
+    "original_filename": "fused_carrier.py"
+  },
+  {
+    "file": "python/blob_mirror/gaussian_logistic.py",
+    "original_sha256": "88a6ac3d78f9439e892492f3181285d2f1b3eb0c4264a98f731170143aa60b41",
+    "sha256": "88a6ac3d78f9439e892492f3181285d2f1b3eb0c4264a98f731170143aa60b41",
+    "adjustment": "none",
+    "original_filename": "gaussian_logistic.py"
+  },
+  {
+    "file": "python/blob_mirror/replicate.py",
+    "original_sha256": "748fb13be42adb7e056709afeb8f073881525309c95d284c30f6086e7b7ef5db",
+    "sha256": "c41855ee7d861c6726688333093d3761672c5413c16982d8fc9b442cf035dd34",
+    "adjustment": "Portable paths / removal of cloud backup / retained constructors; see source diff.",
+    "diff": "records/source_changes/blob_mirror__replicate.py.diff",
+    "original_filename": "replicate.py"
+  },
+  {
+    "file": "python/keras_graph.py",
+    "original_sha256": "4659a11eeeea6fb0350dafd25923c899d6ba269aa9baad7439588694e35e6304",
+    "sha256": "4659a11eeeea6fb0350dafd25923c899d6ba269aa9baad7439588694e35e6304",
+    "adjustment": "none",
+    "original_filename": "keras_graph.py"
+  },
+  {
+    "file": "python/run_original.py",
+    "sha256": "0a08228d5e236bc856486a63e2d40f35b8097234a3d2ccb2e91373710877b484",
+    "adjustment": "Portable isolated-environment and public-source launcher; new packaging code, not a historical training source.",
+    "original_filename": null
+  },
+  {
+    "file": "python/gpt2/run_selected.py",
+    "sha256": "398346112d80d57c32542fe563074f3f32dd334d83fde6acc88c62b62b194ffa",
+    "adjustment": "Portable launcher for the three original saved configurations; new packaging code, not a historical training source.",
+    "original_filename": null
+  },
+  {
+    "file": "python/blob_mirror/predict.py",
+    "sha256": "6e1dc80b58e0bed2b4717c3badc0b40ed2662af85e0ceebafb9fcd6684fe4ae3",
+    "adjustment": "Portable prediction entry point using the original CompactMoments implementation; new packaging code, not a historical training source.",
+    "original_filename": null
+  }
+]

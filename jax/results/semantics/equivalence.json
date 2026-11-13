@@ -1,0 +1,37 @@
+[
+  {
+    "method": "exact Gaussian",
+    "quantity": "activation mean",
+    "maximum_error": 1.9081958235744878e-17
+  },
+  {
+    "method": "exact Gaussian",
+    "quantity": "activation variance",
+    "maximum_error": 2.7755575615628914e-17
+  },
+  {
+    "method": "exact Gaussian",
+    "quantity": "weight mean",
+    "maximum_error": 6.938893903907228e-18
+  },
+  {
+    "method": "exact Gaussian",
+    "quantity": "weight variance",
+    "maximum_error": 8.673617379884035e-19
+  },
+  {
+    "method": "full EP",
+    "quantity": "all iterates",
+    "maximum_error": 1.5543122344752192e-15
+  },
+  {
+    "method": "diagonal EP",
+    "quantity": "all iterates",
+    "maximum_error": 5.551115123125783e-16
+  },
+  {
+    "method": "diagonal MFVI",
+    "quantity": "all iterates",
+    "maximum_error": 2.498001805406602e-16
+  }
+]
